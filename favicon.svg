@@ -1,4 +1,11 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
-  <rect width="32" height="32" rx="6" fill="#07070a"/>
-  <text x="16" y="22" font-family="Georgia, serif" font-size="22" fill="#b6ff3a" text-anchor="middle" font-style="italic">b</text>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <rect width="64" height="64" rx="14" fill="#07070a"/>
+  <text x="32" y="50"
+        font-family="Georgia, 'Times New Roman', serif"
+        font-size="56"
+        font-style="italic"
+        font-weight="400"
+        fill="#b6ff3a"
+        text-anchor="middle"
+        letter-spacing="-0.02em">B</text>
 </svg>
