@@ -184,7 +184,7 @@
       'contact.tag': '04 — let\'s talk',
       'contact.h1': 'Let\'s read', 'contact.h2': 'what your data says.',
       'contact.sub': '15 minutes. Screen-share on your account. You leave with 3 numbers and 3 next moves.',
-      'contact.cta1': 'Book on Calendly', 'contact.cta2': 'moustafabahri@gmail.com',
+      'contact.cta1': 'Book on Calendly', 'contact.cta2': 'contact@bahri.studio',
       'contact.meta': 'Replying within 24h · Mon–Fri · Paris (CET)',
 
       // shared UI
@@ -206,12 +206,17 @@
 
       // case 1 — I Dom You
       'c1.tag':  'live engagement',
-      'c1.role': '<strong>Head of Digital Marketing.</strong> 3 platforms · 12 campaigns · 859K impressions · web + app UX/UI.',
+      'c1.d1':   'Google Ads',
+      'c1.d2':   'Meta · LinkedIn',
+      'c1.d3':   'Product · UX/UI',
+      'c1.role': '<strong>Head of Digital Marketing &amp; Product.</strong> Both sides at once — 3 ad platforms (Google · Meta · LinkedIn) AND <strong>full product development &amp; management</strong> of the website &amp; mobile app, redesigned and re-engineered end-to-end.',
       'c1.hm1':  'ROAS · Search High Intent',
       'c1.hm2':  'YoY revenue · April vs prior year',
       'c1.hm3':  'of all customer traffic = mine',
       'c1.startingP': '12 active campaigns · 3 platforms. 4 campaigns at sub-2× ROAS. <span class="kw">Conversions API</span> ↔ Stripe handoff incomplete · merci-page event missing.',
-      'c1.approachP': 'Took <strong>end-to-end ownership</strong> of the Paid Media architecture and the product surface it feeds. Re-segmented a fragmented 12-campaign account into a 3-tier funnel-aligned system (High-Intent · Brand · Geo). Reallocated <strong>€1,500+</strong> into top-quartile auctions and instated a negative-keyword governance loop. Rebuilt the full <span class="kw">measurement layer</span> — <span class="kw">GA4</span>, <span class="kw">GTM</span>, <span class="kw">Conversions API</span>, server-side handoff into Stripe — so revenue attribution is closed-loop, not modeled. Co-led the on-site UX review with the dev team and shipped landing-page copy myself.',
+      'c1.approachP': 'Took <strong>end-to-end ownership</strong> of the Paid Media architecture <em>and</em> the product surface it feeds. Re-segmented a fragmented 12-campaign account into a 3-tier funnel-aligned system (High-Intent · Brand · Geo). Reallocated <strong>€1,500+</strong> into top-quartile auctions and instated a negative-keyword governance loop. Rebuilt the full <span class="kw">measurement layer</span> — <span class="kw">GA4</span>, <span class="kw">GTM</span>, <span class="kw">Conversions API</span>, server-side handoff into Stripe — so revenue attribution is closed-loop, not modeled. <strong>On the product side:</strong> drove the full website redesign and the mobile-app overhaul as Product lead — wireframes, IA, copy, dev partnership, ship.',
+      'c1.ctaOld':   'Visit idomyou.fr — current site',
+      'c1.ctaBuild': 'new website under construction',
       'c1.m1': 'ROAS · Search High Intent FR',
       'c1.m2': 'incremental revenue · 24 days',
       'c1.m3': 'CPC · 18,387 clicks',
@@ -221,6 +226,10 @@
 
       // case 2 — Parlons Cash
       'c2.tag':  'podcast · finance FR',
+      'c2.d1':   'UX/UI design + audit',
+      'c2.d2':   'SEO + AIO writing',
+      'c2.d3':   'Front-end',
+      'c2.d4':   'Studio outreach',
       'c2.role': '<strong>Solo build, end-to-end.</strong> A French personal-finance podcast had reach in audio but no digital home. I designed it, wrote it, coded it, audited it, and started landing studios.',
       'c2.briefP':    'Turn a podcast brand into a discoverable, monetizable web property. No agency. No team. <strong>One operator, full stack.</strong>',
       'c2.approachP': 'Designed the full UX/UI in <span class="kw">Figma</span> from blank canvas — IA, hierarchy, conversion path. Hand-wrote the front-end HTML/CSS. Wrote every line of on-page copy with a dual <span class="kw">SEO + AIO</span> lens — structured for Google rankings <em>and</em> for AI Overviews / Perplexity / ChatGPT answer panels. Ran a full pre- and post-launch audit (Core Web Vitals, structured data, internal linking). <strong>Reached out directly to podcast studios</strong> to source guest crossovers and sponsorship leads.',
@@ -231,6 +240,10 @@
 
       // case 3 — ProToreMane
       'c3.tag':  'FR → JP · sport-tech',
+      'c3.d1':   'Globalization lead',
+      'c3.d2':   'Market research',
+      'c3.d3':   'SEO architecture',
+      'c3.d4':   'Digital go-to-market',
       'c3.role': '<strong>Globalization lead.</strong> Took a French sport-tech product into the Japanese market. Market research, SEO foundation, and the full digital go-to-market plan — built before a single yen is spent.',
       'c3.briefP':    'Open the Japanese market for a French sport-tech app — not as a translation, as a culturally native product. Required deep <strong>market research</strong> on the JP sport-tech category, competitor mapping, JP search behavior, and a launch sequence the founders could execute.',
       'c3.approachP': 'Led full <span class="kw">market research</span> on the Japanese sport-tech space: category sizing, competitor benchmark, audience segmentation, JP-language search-intent mapping. Designed the <span class="kw">SEO architecture</span> — keyword strategy, structured data, on-site information architecture for both languages. Authored the <strong>complete digital go-to-market plan</strong>: Paid Media phasing, organic growth roadmap, partnership pipeline, KPI tree. Aligned product, engineering, and creative around launch milestones.',
@@ -243,6 +256,8 @@
 
       // case 4 — AIAH
       'c4.tag':  'my product',
+      'c4.d1':   'Founder',
+      'c4.d2':   'Built live',
       'c4.role': 'The marketer-turned-founder arc. I own this one — building it in public.',
       'c4.whatP': '— one-line pitch pending from you —',
       'c4.whyP':  '9 years optimizing other people\'s funnels taught me what the page must do. AIAH is where I apply that to my own.',
@@ -250,8 +265,7 @@
       'c4.m1':    'in progress',
       'c4.visit': 'visit aiah →',
       'c4.stackP':'Next.js · Stripe · i18n · the rest TBA',
-      'c4.cta':   'Visit AIAH',
-      'c4.ctaPending': 'domain pending',
+      'c4.cta':   'Visit aiah.app',
 
       // footer
       'footer.mid':      '— Built live, by hand —',
@@ -307,7 +321,7 @@
       'contact.tag': '04 — on en parle',
       'contact.h1': 'Lisons', 'contact.h2': 'ce que vos données disent.',
       'contact.sub': '15 minutes. Screen-share sur votre compte. Vous repartez avec 3 chiffres et 3 prochaines actions.',
-      'contact.cta1': 'Réserver sur Calendly', 'contact.cta2': 'moustafabahri@gmail.com',
+      'contact.cta1': 'Réserver sur Calendly', 'contact.cta2': 'contact@bahri.studio',
       'contact.meta': 'Réponse sous 24h · Lun–Ven · Paris (CET)',
 
       // shared UI
@@ -329,12 +343,17 @@
 
       // case 1 — I Dom You
       'c1.tag':  'mission en cours',
-      'c1.role': '<strong>Responsable Marketing Digital.</strong> 3 plateformes · 12 campagnes · 859K impressions · UX/UI web + app.',
+      'c1.d1':   'Google Ads',
+      'c1.d2':   'Meta · LinkedIn',
+      'c1.d3':   'Produit · UX/UI',
+      'c1.role': '<strong>Responsable Marketing Digital &amp; Produit.</strong> Les deux côtés en même temps — 3 plateformes pub (Google · Meta · LinkedIn) ET <strong>développement &amp; management produit complet</strong> du site et de l\'app mobile, refondus de A à Z.',
       'c1.hm1':  'ROAS · Search High Intent',
       'c1.hm2':  'revenu YoY · avril vs année précédente',
       'c1.hm3':  'du trafic clients = moi',
       'c1.startingP': '12 campagnes actives · 3 plateformes. 4 campagnes à ROAS sub-2×. <span class="kw">Conversions API</span> ↔ Stripe non finalisée · événement merci-page manquant.',
-      'c1.approachP': 'Pris la <strong>responsabilité de bout en bout</strong> de l\'architecture Paid Media et de la surface produit qu\'elle alimente. Re-segmenté un compte fragmenté de 12 campagnes en un système à 3 niveaux aligné sur le funnel (High-Intent · Brand · Geo). Réalloué <strong>€1 500+</strong> vers les enchères du top-quartile et mis en place une gouvernance de mots-clés négatifs. Reconstruit toute la <span class="kw">couche de mesure</span> — <span class="kw">GA4</span>, <span class="kw">GTM</span>, <span class="kw">Conversions API</span>, handoff server-side vers Stripe — pour que l\'attribution revenue soit en boucle fermée, pas modélisée. Co-piloté la revue UX du site avec l\'équipe dev et écrit le copy des landing pages moi-même.',
+      'c1.approachP': 'Pris la <strong>responsabilité de bout en bout</strong> de l\'architecture Paid Media <em>et</em> de la surface produit qu\'elle alimente. Re-segmenté un compte fragmenté de 12 campagnes en un système à 3 niveaux aligné sur le funnel (High-Intent · Brand · Geo). Réalloué <strong>€1 500+</strong> vers les enchères du top-quartile et mis en place une gouvernance de mots-clés négatifs. Reconstruit toute la <span class="kw">couche de mesure</span> — <span class="kw">GA4</span>, <span class="kw">GTM</span>, <span class="kw">Conversions API</span>, handoff server-side vers Stripe — pour que l\'attribution revenue soit en boucle fermée, pas modélisée. <strong>Côté produit :</strong> piloté la refonte complète du site web et l\'overhaul de l\'app mobile en tant que Product lead — wireframes, IA, copy, partenariat dev, ship.',
+      'c1.ctaOld':   'Visiter idomyou.fr — site actuel',
+      'c1.ctaBuild': 'nouveau site en construction',
       'c1.m1': 'ROAS · Search High Intent FR',
       'c1.m2': 'revenu incrémental · 24 jours',
       'c1.m3': 'CPC · 18 387 clics',
@@ -344,6 +363,10 @@
 
       // case 2 — Parlons Cash
       'c2.tag':  'podcast · finance FR',
+      'c2.d1':   'Design UX/UI + audit',
+      'c2.d2':   'Rédaction SEO + AIO',
+      'c2.d3':   'Front-end',
+      'c2.d4':   'Outreach studios',
       'c2.role': '<strong>Build solo, de bout en bout.</strong> Un podcast français sur les finances perso avait de l\'écoute mais pas de présence digitale. Je l\'ai dessiné, écrit, codé, audité, et j\'ai démarré les studios.',
       'c2.briefP':    'Transformer une marque podcast en propriété web découvrable et monétisable. Pas d\'agence. Pas d\'équipe. <strong>Un opérateur, full-stack.</strong>',
       'c2.approachP': 'UX/UI complet dessiné dans <span class="kw">Figma</span> depuis une page blanche — IA, hiérarchie, parcours de conversion. Front-end HTML/CSS écrit à la main. Chaque ligne de copy on-page rédigée avec une double lentille <span class="kw">SEO + AIO</span> — structurée pour le ranking Google <em>et</em> pour les panneaux AI Overviews / Perplexity / ChatGPT. Audit complet pré- et post-lancement (Core Web Vitals, données structurées, maillage interne). <strong>Approche directe des studios podcast</strong> pour sourcer guest crossovers et leads sponsoring.',
@@ -354,6 +377,10 @@
 
       // case 3 — ProToreMane
       'c3.tag':  'FR → JP · sport-tech',
+      'c3.d1':   'Lead globalisation',
+      'c3.d2':   'Étude de marché',
+      'c3.d3':   'Architecture SEO',
+      'c3.d4':   'Digital go-to-market',
       'c3.role': '<strong>Lead globalisation.</strong> J\'ai porté un produit sport-tech français sur le marché japonais. Étude de marché, fondations SEO, plan digital go-to-market complet — le tout avant qu\'un seul yen ne soit dépensé.',
       'c3.briefP':    'Ouvrir le marché japonais pour une app sport-tech française — pas comme une traduction, mais comme un produit culturellement natif. Nécessitait une <strong>étude de marché</strong> approfondie sur la catégorie sport-tech JP, un mapping concurrentiel, une analyse du search-intent en japonais, et un séquencement de lancement exécutable par les fondateurs.',
       'c3.approachP': 'Étude de marché complète menée sur l\'espace sport-tech japonais : sizing de catégorie, benchmark concurrentiel, segmentation audience, mapping search-intent en japonais. <span class="kw">Architecture SEO</span> dessinée — stratégie mots-clés, données structurées, IA on-site bilingue. Plan <strong>digital go-to-market complet</strong> rédigé : phasage Paid Media, roadmap croissance organique, pipeline partenariats, arbre de KPI. Alignement produit · ingénierie · créa autour des jalons de lancement.',
@@ -366,6 +393,8 @@
 
       // case 4 — AIAH
       'c4.tag':  'mon produit',
+      'c4.d1':   'Fondateur',
+      'c4.d2':   'Construit en live',
       'c4.role': 'Le passage de marketeur à fondateur. Celui-ci, je le possède — je le construis en public.',
       'c4.whatP': '— pitch en une ligne en attente —',
       'c4.whyP':  '9 ans à optimiser les funnels des autres m\'ont appris ce que la page doit faire. AIAH, c\'est là que je l\'applique à la mienne.',
@@ -373,8 +402,7 @@
       'c4.m1':    'en cours',
       'c4.visit': 'visiter aiah →',
       'c4.stackP':'Next.js · Stripe · i18n · le reste à venir',
-      'c4.cta':   'Visiter AIAH',
-      'c4.ctaPending': 'domaine en attente',
+      'c4.cta':   'Visiter aiah.app',
 
       // footer
       'footer.mid':      '— Construit en live, à la main —',
@@ -439,7 +467,7 @@
       'contact.tag': '04 — لنتحدّث',
       'contact.h1': 'لنقرأ', 'contact.h2': 'ما تقوله بياناتك.',
       'contact.sub': '15 دقيقة. مشاركة شاشة على حسابك. تخرج بـ 3 أرقام و3 خطوات تالية.',
-      'contact.cta1': 'احجز على Calendly', 'contact.cta2': 'moustafabahri@gmail.com',
+      'contact.cta1': 'احجز على Calendly', 'contact.cta2': 'contact@bahri.studio',
       'contact.meta': 'الردّ خلال 24 ساعة · الإثنين–الجمعة · باريس (CET)',
 
       // ── shared UI ──
@@ -461,12 +489,17 @@
 
       // ── case 1 — I Dom You ──
       'c1.tag':  'مهمة جارية',
-      'c1.role': '<strong>مدير التسويق الرقمي.</strong> 3 منصات · 12 حملة · 859K مرّة عرض · UX/UI للموقع &amp; التطبيق.',
+      'c1.d1':   'Google Ads',
+      'c1.d2':   'Meta · LinkedIn',
+      'c1.d3':   'منتج · UX/UI',
+      'c1.role': '<strong>مدير التسويق الرقمي &amp; المنتج.</strong> الجانبان معًا — 3 منصات إعلانية (Google · Meta · LinkedIn) <strong>وتطوير وإدارة المنتج بالكامل</strong> للموقع والتطبيق الجوّال، أُعيد تصميمهما وهندستهما من الصفر.',
       'c1.hm1':  'ROAS · Search High Intent',
       'c1.hm2':  'إيرادات YoY · أبريل مقابل العام السابق',
       'c1.hm3':  'من ترافيك العملاء = لي',
       'c1.startingP': '12 حملة نشطة · 3 منصات. 4 حملات بـ ROAS أقل من 2×. تسليم <span class="kw">Conversions API</span> ↔ Stripe غير مكتمل · حدث صفحة الشكر مفقود.',
-      'c1.approachP': 'تولّيت <strong>الملكية الكاملة</strong> لبنية الـ Paid Media وسطح المنتج الذي تغذّيه. أعدت تقسيم حساب مفكّك من 12 حملة إلى نظام ثلاثي الطبقات متماهٍ مع القمع (High-Intent · Brand · Geo). أعدت توزيع <strong>€1,500+</strong> نحو مزادات الربيع الأعلى، وثبّتُّ حلقة حوكمة لكلمات السلب. أعدت بناء <span class="kw">طبقة القياس</span> الكاملة — <span class="kw">GA4</span>، <span class="kw">GTM</span>، <span class="kw">Conversions API</span>، تسليم server-side إلى Stripe — لتكون نسبة الإيرادات بحلقة مغلقة لا نمذجة. شاركتُ في قيادة مراجعة UX على الموقع مع فريق التطوير وكتبتُ نصوص صفحات الهبوط بنفسي.',
+      'c1.approachP': 'تولّيت <strong>الملكية الكاملة</strong> لبنية الـ Paid Media <em>وسطح المنتج</em> الذي تغذّيه. أعدت تقسيم حساب مفكّك من 12 حملة إلى نظام ثلاثي الطبقات متماهٍ مع القمع (High-Intent · Brand · Geo). أعدت توزيع <strong>€1,500+</strong> نحو مزادات الربيع الأعلى، وثبّتُّ حلقة حوكمة لكلمات السلب. أعدت بناء <span class="kw">طبقة القياس</span> الكاملة — <span class="kw">GA4</span>، <span class="kw">GTM</span>، <span class="kw">Conversions API</span>، تسليم server-side إلى Stripe — لتكون نسبة الإيرادات بحلقة مغلقة لا نمذجة. <strong>على جانب المنتج:</strong> قُدتُ إعادة التصميم الكاملة للموقع وإصلاح التطبيق الجوّال بصفتي Product lead — wireframes، IA، copy، شراكة مع الـ dev، شِحن.',
+      'c1.ctaOld':   'زُر idomyou.fr — الموقع الحالي',
+      'c1.ctaBuild': 'موقع جديد قيد الإنشاء',
       'c1.m1': 'ROAS · Search High Intent FR',
       'c1.m2': 'إيرادات إضافية · 24 يومًا',
       'c1.m3': 'CPC · 18,387 نقرة',
@@ -476,6 +509,10 @@
 
       // ── case 2 — Parlons Cash ──
       'c2.tag':  'بودكاست · مالية فرنسية',
+      'c2.d1':   'تصميم UX/UI + تدقيق',
+      'c2.d2':   'كتابة SEO + AIO',
+      'c2.d3':   'Front-end',
+      'c2.d4':   'تواصل مع الاستوديوهات',
       'c2.role': '<strong>بناء فردي، من البداية للنهاية.</strong> بودكاست فرنسي للتمويل الشخصي بصوت قوي ولكن بلا موطن رقمي. صمّمته، كتبته، برمجته، دقّقته، وبدأتُ التواصل مع الاستوديوهات.',
       'c2.briefP':    'تحويل ماركة بودكاست إلى أصل ويب قابل للاكتشاف والتحقيق المالي. لا وكالة. لا فريق. <strong>مشغّل واحد، full-stack.</strong>',
       'c2.approachP': 'صمّمتُ الـ UX/UI بالكامل في <span class="kw">Figma</span> من صفحة بيضاء — IA، تسلسل، مسار التحويل. كتبتُ HTML/CSS الواجهة الأمامية يدويًا. كتبتُ كل سطر copy داخل الصفحات بعدسة <span class="kw">SEO + AIO</span> مزدوجة — مهيكل للترتيب في Google <em>وأيضًا</em> لـ AI Overviews / Perplexity / ChatGPT. تدقيق كامل قبل وبعد الإطلاق (Core Web Vitals، البيانات المهيكلة، الروابط الداخلية). <strong>تواصلتُ مباشرة مع استوديوهات البودكاست</strong> لتأمين guest crossovers ولِيدات رعاية.',
@@ -486,6 +523,10 @@
 
       // ── case 3 — ProToreMane ──
       'c3.tag':  'FR → JP · sport-tech',
+      'c3.d1':   'قائد العولمة',
+      'c3.d2':   'دراسة سوق',
+      'c3.d3':   'بنية SEO',
+      'c3.d4':   'خطة digital go-to-market',
       'c3.role': '<strong>قائد العولمة.</strong> أخذتُ منتجًا فرنسيًا في الـ sport-tech إلى السوق الياباني. دراسة سوق، أساس SEO، وخطة digital go-to-market كاملة — كل ذلك قبل صرف ين واحد.',
       'c3.briefP':    'فتح السوق الياباني لتطبيق sport-tech فرنسي — لا كترجمة، بل كمنتج أصيل ثقافيًا. تطلّب <strong>دراسة سوق</strong> عميقة لفئة sport-tech اليابانية، مسح المنافسين، سلوك البحث في اليابانية، وتسلسل إطلاق ينفّذه المؤسسون.',
       'c3.approachP': 'قُدتُ <span class="kw">دراسة السوق</span> الكاملة لفضاء sport-tech الياباني: حجم الفئة، benchmark تنافسي، تقسيم الجمهور، خرائط search-intent باللغة اليابانية. صمّمت <span class="kw">بنية الـ SEO</span> — استراتيجية كلمات مفتاحية، بيانات مهيكلة، بنية معلومات على الموقع باللغتين. كتبت <strong>خطة الـ digital go-to-market الكاملة</strong>: تسلسل Paid Media، خارطة طريق للنمو العضوي، خط أنابيب الشراكات، شجرة KPI. وحّدتُ المنتج · الهندسة · الإبداع حول مراحل الإطلاق.',
@@ -498,6 +539,8 @@
 
       // ── case 4 — AIAH ──
       'c4.tag':  'منتجي',
+      'c4.d1':   'مؤسِّس',
+      'c4.d2':   'بناء على الملأ',
       'c4.role': 'قوس المسوّق الذي صار مؤسِّسًا. هذا أملكه أنا — أبنيه على الملأ.',
       'c4.whatP': '— عبارة في سطر واحد بانتظارك —',
       'c4.whyP':  '9 سنوات من تحسين قمعات الآخرين علّمتني ما الذي يجب أن تفعله الصفحة. AIAH هو حيث أطبّق ذلك على نفسي.',
@@ -505,8 +548,7 @@
       'c4.m1':    'قيد التنفيذ',
       'c4.visit': 'زُر aiah ←',
       'c4.stackP':'Next.js · Stripe · i18n · والباقي قريبًا',
-      'c4.cta':   'زُر AIAH',
-      'c4.ctaPending': 'الدومين بانتظار',
+      'c4.cta':   'زُر aiah.app',
 
       // ── footer ──
       'footer.mid':      '— مبنيّ على الملأ، يدويًا —',

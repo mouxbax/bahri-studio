@@ -685,6 +685,50 @@ section{ padding: 120px var(--pad-x); max-width:var(--max); margin:0 auto; posit
   transition: border-color .25s, color .25s, background .25s, transform .25s;
 }
 .case-cta:hover{ border-color: var(--accent); color: var(--accent); transform: translateY(-2px); }
+
+/* Glowing CTA — pulses subtly to draw the eye */
+.case-cta-glow{
+  border-color: rgba(182,255,58,.45);
+  background: rgba(182,255,58,.04);
+  color: var(--txt);
+  box-shadow: 0 0 18px rgba(182,255,58,.20);
+  animation: cta-glow 2.6s ease-in-out infinite;
+}
+.case-cta-glow:hover{
+  background: rgba(182,255,58,.08);
+  border-color: var(--accent);
+  color: var(--accent);
+  box-shadow: 0 0 30px rgba(182,255,58,.42);
+  transform: translateY(-2px);
+}
+@keyframes cta-glow{
+  0%,100%{ box-shadow: 0 0 14px rgba(182,255,58,.16); }
+  50%   { box-shadow: 0 0 28px rgba(182,255,58,.36); }
+}
+
+/* "under construction" indicator — warm tone, static dot */
+.case-cta-build{
+  display: inline-flex; align-items: center; gap: 8px;
+  color: var(--warm) !important;
+  letter-spacing: .14em;
+}
+.build-dot{
+  display: inline-block;
+  width: 7px; height: 7px;
+  border-radius: 50%;
+  background: var(--warm);
+  flex: 0 0 auto;
+  position: relative;
+}
+.build-dot::after{
+  content:""; position:absolute; inset:0;
+  border-radius:50%;
+  background: var(--warm);
+  transform: scale(1);
+  opacity: .6;
+  animation: live-pulse 2.2s ease-out infinite;
+  pointer-events: none;
+}
 .case-cta[data-disabled]{ opacity: .55; cursor: not-allowed; pointer-events: none; }
 .case-cta-warm:hover{ border-color: var(--warm); color: var(--warm); }
 .case-cta-pending{
