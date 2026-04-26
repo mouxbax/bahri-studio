@@ -59,6 +59,11 @@
     requestAnimationFrame(step);
   };
 
+  /* ─────────  ENTRY ANIMATIONS — IntersectionObserver + CSS, no GSAP  ───────── */
+  // Tag everything that should fade-up on scroll
+  const fadeTargets = document.querySelectorAll(
+    '.section-head, .case-body, .service, .about-lead, .contact-headline, .case-num, .track-li, .track-card, [data-count]'
+  );
   const io = new IntersectionObserver((entries) => {
     entries.forEach(e => {
       if (!e.isIntersecting) return;
@@ -66,58 +71,16 @@
       e.target.classList.add('in');
       io.unobserve(e.target);
     });
-  }, { threshold: 0.4 });
+  }, { rootMargin: '0px 0px -10% 0px', threshold: 0.05 });
+  fadeTargets.forEach(el => { el.classList.add('reveal'); io.observe(el); });
 
-  document.querySelectorAll('[data-count]').forEach(el => io.observe(el));
-
-  /* ─────────  GSAP SCROLL REVEALS  ───────── */
-  if (window.gsap && window.ScrollTrigger) {
-    gsap.registerPlugin(ScrollTrigger);
-
-    gsap.from('.hero-title .word', {
-      y: 90,
-      opacity: 0,
-      duration: 1.1,
-      ease: 'power3.out',
-      stagger: 0.08,
-      delay: 0.1,
+  /* ─────────  PAUSE keyword marquee when off-screen  ───────── */
+  const marquee = document.querySelector('.kw-marquee .kw-track');
+  if (marquee) {
+    const mq = new IntersectionObserver(([entry]) => {
+      marquee.style.animationPlayState = entry.isIntersecting ? 'running' : 'paused';
     });
-
-    gsap.from('.hero-sub, .hero-stats, .hero-cta', {
-      y: 30,
-      opacity: 0,
-      duration: 0.9,
-      ease: 'power2.out',
-      stagger: 0.12,
-      delay: 0.5,
-    });
-
-    gsap.utils.toArray('.case').forEach((c) => {
-      gsap.from(c.querySelector('.case-body'), {
-        y: 40,
-        opacity: 0,
-        duration: 0.9,
-        ease: 'power2.out',
-        scrollTrigger: { trigger: c, start: 'top 75%', once: true },
-      });
-      gsap.from(c.querySelector('.case-num'), {
-        scale: 0.4,
-        opacity: 0,
-        duration: 1.1,
-        ease: 'power3.out',
-        scrollTrigger: { trigger: c, start: 'top 80%', once: true },
-      });
-    });
-
-    gsap.utils.toArray('.section-head, .service, .about-lead, .contact-headline').forEach((el) => {
-      gsap.from(el, {
-        y: 30,
-        opacity: 0,
-        duration: 0.9,
-        ease: 'power2.out',
-        scrollTrigger: { trigger: el, start: 'top 85%', once: true },
-      });
-    });
+    mq.observe(document.querySelector('.kw-marquee'));
   }
 
   /* ─────────  i18n  ───────── */
