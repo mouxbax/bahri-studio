@@ -12,18 +12,67 @@
   const lowPower = reducedMotion || lowEnd;
   if (lowPower) document.documentElement.classList.add('low-power');
 
-  /* ─────────  CURSOR — single dot, instant, no rAF  ───────── */
-  const dot = document.querySelector('.cursor-dot');
-  if (dot && supportsHover && !lowPower) {
+  /* ─────────  CURSOR — instant dot + lerping halo, rAF only while moving  ───────── */
+  const dot  = document.querySelector('.cursor-dot');
+  const spot = document.querySelector('.cursor-spot');
+  if (supportsHover && !lowPower && dot && spot) {
+    let tx = window.innerWidth / 2, ty = window.innerHeight / 2;
+    let sx = tx, sy = ty;
+    let rafActive = false, lastMove = 0;
+
+    const tick = () => {
+      sx += (tx - sx) * 0.20;
+      sy += (ty - sy) * 0.20;
+      spot.style.transform = `translate3d(${sx}px, ${sy}px, 0) translate(-50%,-50%)`;
+      const settled = Math.abs(tx - sx) < 0.4 && Math.abs(ty - sy) < 0.4;
+      if (settled && performance.now() - lastMove > 220) { rafActive = false; return; }
+      requestAnimationFrame(tick);
+    };
+
     window.addEventListener('pointermove', (e) => {
-      dot.style.transform = `translate3d(${e.clientX}px, ${e.clientY}px, 0) translate(-50%,-50%)`;
+      tx = e.clientX; ty = e.clientY;
+      lastMove = performance.now();
+      // Dot is INSTANT — written directly on every move, no rAF wait
+      dot.style.transform = `translate3d(${tx}px, ${ty}px, 0) translate(-50%,-50%)`;
+      if (!rafActive) { rafActive = true; requestAnimationFrame(tick); }
     }, { passive: true });
-    document.querySelectorAll('a, button, .reveal-block, .service, .case-block').forEach(el => {
+
+    document.querySelectorAll('a, button, .reveal-block, .service, .case-block, [data-magnetic]').forEach(el => {
       el.addEventListener('pointerenter', () => dot.classList.add('is-hover'));
       el.addEventListener('pointerleave', () => dot.classList.remove('is-hover'));
     });
-  } else if (dot) {
-    dot.remove(); // no need to keep an invisible element on low-power
+  } else {
+    dot && dot.remove();
+    spot && spot.remove();
+  }
+
+  /* ─────────  MAGNETIC HERO TITLE — rAF-throttled, radius-bounded  ───────── */
+  if (supportsHover && !lowPower) {
+    document.querySelectorAll('[data-magnetic]').forEach(el => {
+      const strength = 6;
+      const radius = 280;
+      let raf = 0, dx = 0, dy = 0, w = 1, h = 1;
+      const apply = () => { raf = 0; el.style.transform = `translate3d(${dx}px, ${dy}px, 0)`; };
+      el.addEventListener('pointermove', (e) => {
+        const r = el.getBoundingClientRect();
+        w = r.width; h = r.height;
+        const cx = r.left + w / 2, cy = r.top + h / 2;
+        const ddx = e.clientX - cx, ddy = e.clientY - cy;
+        const dist = Math.hypot(ddx, ddy);
+        if (dist > radius) { dx = 0; dy = 0; }
+        else {
+          const f = 1 - dist / radius;
+          dx = (ddx / w) * strength * f;
+          dy = (ddy / h) * strength * f;
+        }
+        if (!raf) raf = requestAnimationFrame(apply);
+      }, { passive: true });
+      el.addEventListener('pointerleave', () => {
+        el.style.transition = 'transform .5s cubic-bezier(.2,.8,.3,1)';
+        el.style.transform = '';
+        setTimeout(() => { el.style.transition = ''; }, 500);
+      });
+    });
   }
 
   /* ─────────  REVEAL BLOCK SPOTLIGHT (rAF-throttled)  ───────── */
