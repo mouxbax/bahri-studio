@@ -78,12 +78,11 @@ img,svg{ display:block; max-width:100%; }
   border:1px solid var(--accent);
 }
 .cursor-spot{
-  width:540px; height:540px; border-radius:50%;
-  transform:translate(-50%,-50%);
+  width:480px; height:480px; border-radius:50%;
+  transform: translate(-50%,-50%) translateZ(0);
   background: radial-gradient(circle, rgba(182,255,58,.10) 0%, rgba(182,255,58,.04) 30%, transparent 65%);
-  filter: blur(2px);
   z-index:1;
-  mix-blend-mode:screen;
+  /* removed: filter:blur + mix-blend-mode (both forced GPU recomp every frame) */
 }
 
 /* ───────────  GRAIN  ─────────── */
@@ -102,9 +101,8 @@ img,svg{ display:block; max-width:100%; }
   display:flex; align-items:center; justify-content:space-between; gap:24px;
   padding: 18px var(--pad-x);
   z-index:50;
-  background: linear-gradient(to bottom, rgba(7,7,10,.85), rgba(7,7,10,.0));
-  backdrop-filter: blur(8px);
-  -webkit-backdrop-filter: blur(8px);
+  background: linear-gradient(to bottom, rgba(7,7,10,.95) 0%, rgba(7,7,10,.7) 70%, rgba(7,7,10,0) 100%);
+  /* dropped backdrop-filter: it forces full repaint of everything underneath every scroll-frame */
 }
 .brand{ display:flex; align-items:center; gap:10px; font-family:var(--mono); font-size:13px; }
 .brand-mark{ color:var(--accent); font-size:18px; line-height:1; }
@@ -140,13 +138,21 @@ section{ padding: 120px var(--pad-x); max-width:var(--max); margin:0 auto; posit
 .dot-live{
   display:inline-block; width:7px; height:7px; border-radius:50%;
   background:var(--accent);
-  box-shadow: 0 0 0 0 rgba(182,255,58,.7);
-  animation: pulse 1.8s infinite;
+  position: relative;
+}
+.dot-live::after{
+  content:""; position:absolute; inset:0;
+  border-radius:50%;
+  background: var(--accent);
+  transform: scale(1);
+  opacity: .6;
+  animation: pulse 1.8s ease-out infinite;
+  pointer-events: none;
 }
 @keyframes pulse{
-  0%   { box-shadow: 0 0 0 0 rgba(182,255,58,.6); }
-  70%  { box-shadow: 0 0 0 12px rgba(182,255,58,0); }
-  100% { box-shadow: 0 0 0 0 rgba(182,255,58,0); }
+  0%   { transform: scale(1);   opacity:.6; }
+  80%  { transform: scale(3.4); opacity:0; }
+  100% { transform: scale(3.4); opacity:0; }
 }
 
 .hero-title{
@@ -394,24 +400,32 @@ section{ padding: 120px var(--pad-x); max-width:var(--max); margin:0 auto; posit
 }
 .trust-badge-live{ background: var(--accent); color: var(--bg); }
 
-/* shared live dot — pulses softly to signal "live" */
+/* shared live dot — transform-only pulse (cheap on GPU) */
 .live-dot{
   display: inline-block;
   width: 6px; height: 6px;
   border-radius: 50%;
   background: currentColor;
-  box-shadow: 0 0 0 0 currentColor;
-  animation: live-pulse 1.8s infinite;
+  position: relative;
   flex: 0 0 auto;
+}
+.live-dot::after{
+  content:""; position:absolute; inset:0;
+  border-radius:50%;
+  background: currentColor;
+  transform: scale(1);
+  opacity: .55;
+  animation: live-pulse 1.8s ease-out infinite;
+  pointer-events: none;
 }
 .trust-badge-live .live-dot{
   background: var(--bg);
   width: 5px; height: 5px;
 }
 @keyframes live-pulse{
-  0%   { box-shadow: 0 0 0 0   rgba(182,255,58,.55); }
-  70%  { box-shadow: 0 0 0 8px rgba(182,255,58,0);   }
-  100% { box-shadow: 0 0 0 0   rgba(182,255,58,0);   }
+  0%   { transform: scale(1);   opacity:.55; }
+  80%  { transform: scale(3.0); opacity:0;   }
+  100% { transform: scale(3.0); opacity:0;   }
 }
 
 /* Case · in-progress treatment for I Dom You (and any future live engagement) */
@@ -767,6 +781,35 @@ section{ padding: 120px var(--pad-x); max-width:var(--max); margin:0 auto; posit
 /* ───────────  REVEAL ANIMS  ─────────── */
 .fade-up{ opacity: 0; transform: translateY(28px); }
 .fade-up.in{ opacity: 1; transform: translateY(0); transition: opacity .9s ease, transform .9s ease; }
+
+/* ───────────  PERF: skip rendering offscreen sections  ─────────── */
+/* `content-visibility: auto` lets the browser skip layout/paint for offscreen blocks.
+   `contain-intrinsic-size` reserves space so scrollbar doesn't jump. */
+.cases, .about, .services, .contact, .kw-marquee, .trust{
+  content-visibility: auto;
+  contain-intrinsic-size: 1px 800px;
+}
+.case{
+  content-visibility: auto;
+  contain-intrinsic-size: 1px 600px;
+}
+.service{
+  content-visibility: auto;
+  contain-intrinsic-size: 1px 480px;
+}
+
+/* ───────────  PERF: reduced motion  ─────────── */
+@media (prefers-reduced-motion: reduce){
+  *,*::before,*::after{
+    animation-duration: 0.001s !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001s !important;
+    scroll-behavior: auto !important;
+  }
+  .grain, .cursor-spot, .cursor-dot{ display:none !important; }
+  .kw-track{ animation: none !important; }
+  body{ cursor: auto; }
+}
 
 /* ───────────  RESPONSIVE  ─────────── */
 @media (max-width: 900px){
