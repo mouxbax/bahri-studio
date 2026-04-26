@@ -480,6 +480,52 @@ section{ padding: 120px var(--pad-x); max-width:var(--max); margin:0 auto; posit
 }
 .case-tag-live .live-dot{ background: var(--accent); }
 
+/* Warm variant — for AIAH (matches its orange brand identity) */
+.case-tag-live-warm{
+  display: inline-flex; align-items: center; gap: 6px;
+  background: rgba(255,122,82,.08);
+  border: 1px solid rgba(255,122,82,.34);
+  color: var(--warm);
+  padding: 3px 9px; border-radius: 999px;
+  font-family: var(--mono); font-size: 13px;
+  vertical-align: middle; margin-left: 10px;
+  letter-spacing: .04em;
+}
+.case-tag-live-warm .live-dot{ background: var(--warm); color: var(--warm); }
+.case-status-warm{ color: var(--warm) !important; }
+.case-status-warm .live-dot{ background: var(--warm); color: var(--warm); }
+.case-live-warm::before{
+  content: "";
+  position: absolute;
+  left: -1px; top: 0;
+  width: 1px; height: 60px;
+  background: var(--warm);
+  box-shadow: 0 0 12px rgba(255,122,82,.55);
+}
+.case-cta-glow-warm{
+  border-color: rgba(255,122,82,.45);
+  background: rgba(255,122,82,.04);
+  color: var(--txt);
+  box-shadow: 0 0 18px rgba(255,122,82,.18);
+  animation: cta-glow-warm 2.6s ease-in-out infinite;
+}
+.case-cta-glow-warm:hover{
+  background: rgba(255,122,82,.10);
+  border-color: var(--warm);
+  color: var(--warm);
+  box-shadow: 0 0 30px rgba(255,122,82,.42);
+  transform: translateY(-2px);
+}
+@keyframes cta-glow-warm{
+  0%,100%{ box-shadow: 0 0 14px rgba(255,122,82,.16); }
+  50%   { box-shadow: 0 0 28px rgba(255,122,82,.36); }
+}
+/* Override the green live-pulse halo to warm when nested inside warm context */
+.case-tag-live-warm .live-dot::after,
+.case-status-warm .live-dot::after{
+  background: var(--warm);
+}
+
 /* Case headline metrics row (I Dom You etc.) */
 .case-headline-metrics{
   display: grid;
