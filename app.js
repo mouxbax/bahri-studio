@@ -5,40 +5,25 @@
 (() => {
   const supportsHover = window.matchMedia('(hover: hover)').matches;
 
-  /* ─────────  CURSOR — instant dot, soft halo · rAF only when moving ───────── */
-  const dot  = document.querySelector('.cursor-dot');
-  const spot = document.querySelector('.cursor-spot');
-  const spotPos = { x: window.innerWidth / 2, y: window.innerHeight / 2 };
-  let targetX = spotPos.x, targetY = spotPos.y;
-  let rafActive = false;
-  let lastMove = 0;
+  /* ─────────  LOW-POWER DETECTION  ───────── */
+  // Auto-disable heavy effects on slow CPUs / low memory / reduced-motion users
+  const reducedMotion = matchMedia('(prefers-reduced-motion: reduce)').matches;
+  const lowEnd = (navigator.hardwareConcurrency || 8) < 4 || (navigator.deviceMemory || 8) < 4;
+  const lowPower = reducedMotion || lowEnd;
+  if (lowPower) document.documentElement.classList.add('low-power');
 
-  if (supportsHover) {
+  /* ─────────  CURSOR — single dot, instant, no rAF  ───────── */
+  const dot = document.querySelector('.cursor-dot');
+  if (dot && supportsHover && !lowPower) {
     window.addEventListener('pointermove', (e) => {
-      targetX = e.clientX;
-      targetY = e.clientY;
-      lastMove = performance.now();
-      // dot is INSTANT — no lerp, no rAF wait
-      dot.style.transform = `translate(${targetX}px, ${targetY}px) translate(-50%,-50%)`;
-      if (!rafActive) { rafActive = true; requestAnimationFrame(tick); }
+      dot.style.transform = `translate3d(${e.clientX}px, ${e.clientY}px, 0) translate(-50%,-50%)`;
     }, { passive: true });
-
-    const tick = () => {
-      spotPos.x += (targetX - spotPos.x) * 0.45;
-      spotPos.y += (targetY - spotPos.y) * 0.45;
-      spot.style.transform = `translate(${spotPos.x}px, ${spotPos.y}px) translate(-50%,-50%)`;
-
-      const dx = targetX - spotPos.x, dy = targetY - spotPos.y;
-      const settled = Math.abs(dx) < 0.4 && Math.abs(dy) < 0.4;
-      const idle = performance.now() - lastMove > 220;
-      if (settled && idle) { rafActive = false; return; }
-      requestAnimationFrame(tick);
-    };
-
-    document.querySelectorAll('a, button, [data-magnetic], .reveal-block, .service, .case-block').forEach(el => {
+    document.querySelectorAll('a, button, .reveal-block, .service, .case-block').forEach(el => {
       el.addEventListener('pointerenter', () => dot.classList.add('is-hover'));
       el.addEventListener('pointerleave', () => dot.classList.remove('is-hover'));
     });
+  } else if (dot) {
+    dot.remove(); // no need to keep an invisible element on low-power
   }
 
   /* ─────────  REVEAL BLOCK SPOTLIGHT (rAF-throttled)  ───────── */
@@ -55,54 +40,8 @@
     }, { passive: true });
   });
 
-  /* ─────────  MAGNETIC TITLES (subtle — won't push glyphs off-screen) ───────── */
-  if (supportsHover) {
-    document.querySelectorAll('[data-magnetic]').forEach(el => {
-      const strength = 6;
-      const radius = 280; // only react when cursor is within this distance
-      el.addEventListener('pointermove', (e) => {
-        const r = el.getBoundingClientRect();
-        const cx = r.left + r.width / 2;
-        const cy = r.top  + r.height / 2;
-        const dx = e.clientX - cx;
-        const dy = e.clientY - cy;
-        const dist = Math.hypot(dx, dy);
-        if (dist > radius) { el.style.transform = ''; return; }
-        const falloff = 1 - dist / radius;
-        el.style.transform = `translate(${(dx/r.width)*strength*falloff}px, ${(dy/r.height)*strength*falloff}px)`;
-      }, { passive: true });
-      el.addEventListener('pointerleave', () => {
-        el.style.transition = 'transform .5s cubic-bezier(.2,.8,.3,1)';
-        el.style.transform = '';
-        setTimeout(() => { el.style.transition = ''; }, 500);
-      });
-    });
-  }
-
-  /* ─────────  GRAIN — paint ONCE, static, repainted only on resize  ───────── */
-  const grain = document.querySelector('.grain');
-  if (grain) {
-    const ctx = grain.getContext('2d', { alpha: true });
-    const draw = () => {
-      grain.width  = Math.min(window.innerWidth, 640);
-      grain.height = Math.min(window.innerHeight, 640);
-      const w = grain.width, h = grain.height;
-      const img = ctx.createImageData(w, h);
-      const d = img.data;
-      for (let i = 0; i < d.length; i += 4) {
-        const v = (Math.random() * 255) | 0;
-        d[i] = d[i+1] = d[i+2] = v;
-        d[i+3] = 18;
-      }
-      ctx.putImageData(img, 0, 0);
-    };
-    draw();
-    let resizeTimer = 0;
-    window.addEventListener('resize', () => {
-      clearTimeout(resizeTimer);
-      resizeTimer = setTimeout(draw, 200);
-    }, { passive: true });
-  }
+  // Magnetic title transforms removed — they ran on every pointermove and weren't worth the cost.
+  // Grain canvas removed entirely — body has a subtle CSS noise via background-image.
 
   /* ─────────  COUNT-UP STATS (on scroll into view)  ───────── */
   const animateCount = (el) => {

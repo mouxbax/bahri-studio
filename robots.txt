@@ -23,4 +23,5 @@ Allow: /
 User-agent: CCBot
 Allow: /
 
-Sitemap: https://bahri.studio/sitemap.xml
+Sitemap: https://www.bahri.studio/sitemap.xml
+Host: www.bahri.studio
