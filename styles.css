@@ -271,13 +271,33 @@ section{ padding: 120px var(--pad-x); max-width:var(--max); margin:0 auto; posit
   margin: 0 auto;
 }
 .trust-label{ font-family:var(--mono); font-size:11px; color:var(--txt-mute); text-transform:uppercase; letter-spacing:.18em; }
-.trust-row{ display:flex; gap:22px; align-items:baseline; flex:1; flex-wrap:wrap; }
-.trust-logo{
-  font-family: var(--serif); font-size: clamp(22px, 3vw, 34px);
-  color: var(--txt-mute);
-  transition: color .25s, letter-spacing .25s;
+.trust-row{
+  display: flex;
+  gap: 22px;
+  align-items: baseline;
+  flex: 1 1 auto;
+  flex-wrap: nowrap;            /* never wrap to 2 lines */
+  overflow-x: auto;             /* horizontal scroll on narrow screens instead of wrapping */
+  scrollbar-width: none;
+  -webkit-overflow-scrolling: touch;
+  white-space: nowrap;
 }
-.trust-logo:hover{ color: var(--txt); letter-spacing:.01em; }
+.trust-row::-webkit-scrollbar{ display: none; }
+
+.trust-logo{
+  font-family: var(--serif);
+  font-size: clamp(22px, 3vw, 34px);
+  color: var(--txt-mute);
+  display: inline-block;
+  transform-origin: center;
+  transition: color .25s ease, transform .25s ease;
+  flex: 0 0 auto;               /* never shrink — siblings won't reflow */
+  white-space: nowrap;
+}
+.trust-logo:hover{
+  color: var(--txt);
+  transform: scale(1.04);       /* very light magnification, no layout shift */
+}
 .trust-sep{ color: var(--txt-dim); font-family: var(--serif); font-size: 28px; }
 
 /* ───────────  SECTION HEAD  ─────────── */
