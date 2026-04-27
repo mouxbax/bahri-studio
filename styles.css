@@ -297,7 +297,7 @@ section{ padding: 120px var(--pad-x); max-width:var(--max); margin:0 auto; posit
 }
 .trust-logo:hover{
   color: var(--txt);
-  transform: scale(1.04);       /* very light magnification, no layout shift */
+  /* no transform — user explicitly doesn't want the magnify */
 }
 .trust-sep{ color: var(--txt-dim); font-family: var(--serif); font-size: 28px; }
 
@@ -482,17 +482,25 @@ section{ padding: 120px var(--pad-x); max-width:var(--max); margin:0 auto; posit
 .case-tag-live .live-dot{ background: var(--accent); }
 
 /* Warm variant — for AIAH (matches its orange brand identity) */
+/* AIAH "my product" badge — warm-orange, intensified */
+.case-head h3 .case-tag-live-warm,
 .case-tag-live-warm{
-  display: inline-flex; align-items: center; gap: 6px;
-  background: rgba(255,122,82,.08);
-  border: 1px solid rgba(255,122,82,.34);
-  color: var(--warm);
-  padding: 3px 9px; border-radius: 999px;
+  display: inline-flex !important; align-items: center; gap: 6px;
+  background: rgba(255,122,82,.18);
+  border: 1px solid rgba(255,122,82,.55);
+  color: var(--warm) !important;
+  padding: 3px 10px; border-radius: 999px;
   font-family: var(--mono); font-size: 13px;
   vertical-align: middle; margin-left: 10px;
   letter-spacing: .04em;
+  font-weight: 500;
+  box-shadow: 0 0 14px rgba(255,122,82,.18);
 }
-.case-tag-live-warm .live-dot{ background: var(--warm); color: var(--warm); }
+.case-tag-live-warm .live-dot{
+  background: var(--warm) !important;
+  color: var(--warm) !important;
+}
+.case-tag-live-warm > span[data-i18n]{ color: var(--warm) !important; }
 .case-status-warm{ color: var(--warm) !important; }
 .case-status-warm .live-dot{ background: var(--warm); color: var(--warm); }
 .case-live-warm::before{
@@ -1023,7 +1031,8 @@ section{ padding: 120px var(--pad-x); max-width:var(--max); margin:0 auto; posit
   .case-num{ font-size: 48px; }
   .case-grid{ grid-template-columns: 1fr; }
   .service-grid{ grid-template-columns: 1fr; }
-  .trust{ flex-direction: column; align-items: flex-start; }
+  /* keep trust as single row even on mobile — internal trust-row scrolls horizontally if needed */
+  .trust{ gap: 18px; padding-top: 40px; padding-bottom: 40px; }
 }
 @media (hover: none){
   body{ cursor: auto; }
