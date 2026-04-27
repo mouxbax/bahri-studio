@@ -447,4 +447,11 @@
     });
   });
 
+  /* Auto-init from <html lang>: lets /fr/ render in French without flash of EN */
+  const initLang = (document.documentElement.lang || 'en').slice(0, 2);
+  if (initLang !== 'en' && I18N[initLang]) {
+    applyLang(initLang);
+  }
+  document.documentElement.removeAttribute('data-loading');
+
 })();

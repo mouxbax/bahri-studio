@@ -1,10 +1,20 @@
 <!doctype html>
-<html lang="fr" data-theme="dark">
+<html lang="fr" data-theme="dark" data-loading>
 <head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+<!-- Anti-FOUC failsafe: reveal even if JS doesn't run -->
+<script>setTimeout(function(){document.documentElement.removeAttribute('data-loading');},800);</script>
 <!-- Consent Mode v2 (must load BEFORE GTM) -->
-<script src="../consent.js"></script>
+<script src="/consent.js"></script>
+<!-- CookieHub CMP — loads consent banner and updates consent state -->
+<script src="https://cdn.cookiehub.eu/c2/fb3e7d1d.js"></script>
+<script type="text/javascript">
+document.addEventListener("DOMContentLoaded", function(event) {
+  var cpm = {};
+  window.cookiehub.load(cpm);
+});
+</script>
 <!-- Google Tag Manager -->
 <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
 new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
@@ -14,50 +24,61 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <!-- End Google Tag Manager -->
 <title>Consultant Google Ads &amp; Meta Ads · Paris | Moustafa Bahri</title>
 <meta name="description" content="Consultant freelance Google Ads &amp; Meta Ads à Paris. 9 ans, budgets 10–100K€/mois, ROAS jusqu'à 47×. GTM, Conversions API, Looker Studio. Audit gratuit en 15 min." />
-<meta name="keywords" content="consultant Google Ads Paris, freelance Meta Ads France, expert Paid Media Paris, stratège digital Paris, transformation digitale Paris, fractional Head of Digital, ROAS, GTM, Conversions API, GA4, Looker Studio" />
 <meta name="author" content="Moustafa Bahri" />
 <meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1" />
+<meta name="keywords" content="Digital Transformation, Transformation Digitale, Google Ads, Meta Ads, Paid Media, ROAS, CPA, GTM, Conversions API, Looker Studio, GA4, SEO, SEA, SEM, CRO, A/B Testing, Funnel Optimization, Growth Marketing, Shopify, AI-Powered Campaign Optimization, fractional Head of Digital, freelance Paris, consultant Google Ads France" />
 <link rel="canonical" href="https://www.bahri.studio/fr/" />
+<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+<link rel="manifest" href="/site.webmanifest" />
+<meta name="theme-color" content="#07070a" />
 <link rel="alternate" hreflang="en" href="https://www.bahri.studio/" />
 <link rel="alternate" hreflang="fr" href="https://www.bahri.studio/fr/" />
 <link rel="alternate" hreflang="x-default" href="https://www.bahri.studio/" />
-<link rel="icon" type="image/svg+xml" href="../favicon.svg" />
-<link rel="icon" type="image/png" sizes="32x32" href="../favicon-32x32.png" />
-<link rel="icon" type="image/png" sizes="16x16" href="../favicon-16x16.png" />
-<link rel="apple-touch-icon" sizes="180x180" href="../apple-touch-icon.png" />
-<link rel="manifest" href="../site.webmanifest" />
-<meta name="theme-color" content="#07070a" />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="https://www.bahri.studio/fr/" />
 <meta property="og:site_name" content="bahri.studio" />
-<meta property="og:locale" content="fr_FR" />
-<meta property="og:locale:alternate" content="en_US" />
-<meta property="og:title" content="Consultant Google Ads &amp; Meta Ads · Paris | Moustafa Bahri" />
+<meta property="og:title" content="Consultant Google &amp; Meta Ads · Paris | Moustafa Bahri" />
 <meta property="og:description" content="9 ans en Paid Media. Budgets 10–100K€/mois, ROAS jusqu'à 47×. GTM, Conversions API, Looker Studio. Audit gratuit en 15 min." />
 <meta property="og:image" content="https://www.bahri.studio/og-image.png" />
 <meta property="og:image:width" content="1200" />
 <meta property="og:image:height" content="630" />
 <meta property="og:image:alt" content="Moustafa Bahri — Consultant Google &amp; Meta Ads · Paris" />
+<meta property="og:locale" content="fr_FR" />
+<meta property="og:locale:alternate" content="en_US" />
 <meta name="twitter:card" content="summary_large_image" />
-<meta name="twitter:title" content="Consultant Google Ads &amp; Meta Ads · Paris | Moustafa Bahri" />
+<meta name="twitter:title" content="Consultant Google &amp; Meta Ads · Paris | Moustafa Bahri" />
 <meta name="twitter:description" content="9 ans en Paid Media. ROAS jusqu'à 47×. Audit gratuit en 15 min." />
 <meta name="twitter:image" content="https://www.bahri.studio/og-image.png" />
+<meta name="twitter:image:alt" content="Moustafa Bahri — Consultant Google &amp; Meta Ads · Paris" />
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "Person",
-  "@id": "https://www.bahri.studio/#person",
   "name": "Moustafa Bahri",
-  "jobTitle": "Consultant Google & Meta Ads · Paid Media · Transformation Digitale",
-  "url": "https://www.bahri.studio/fr/",
+  "jobTitle": "Google & Meta Ads Strategist · Paid Media · Digital Transformation · Fractional Head of Digital + Product",
+  "url": "https://www.bahri.studio",
   "image": "https://www.bahri.studio/og-image.png",
   "email": "contact@bahri.studio",
-  "address": { "@type": "PostalAddress", "addressLocality": "Paris", "postalCode": "75011", "addressCountry": "FR" },
-  "knowsLanguage": ["fr","en","ar"],
+  "telephone": "",
+  "nationality": "LB",
   "sameAs": [
     "https://www.linkedin.com/in/moustafabahri",
     "https://github.com/mouxbax",
     "https://calendly.com/contact-bahri"
+  ],
+  "address": { "@type": "PostalAddress", "addressLocality": "Paris", "postalCode": "75011", "addressCountry": "FR" },
+  "knowsLanguage": ["fr","en","ar"],
+  "knowsAbout": ["Digital Transformation","Transformation Digitale","Google Ads","Meta Ads","LinkedIn Ads","ROAS optimization","CPA reduction","GA4","GTM","Conversions API","Multi-touch Attribution","Looker Studio","SEA","SEO","SEM","CRO","Funnel Optimization","Growth Marketing","UX/UI","Shopify","AI-Powered Campaign Optimization","A/B Testing","Fractional Head of Digital","Product Management"],
+  "alumniOf": [
+    { "@type": "EducationalOrganization", "name": "USGCI Paris", "description": "Master International Business (2024–2026)" },
+    { "@type": "EducationalOrganization", "name": "LIU Beyrouth", "description": "Bac+4 Marketing & Communication Digitale (2014–2017)" }
+  ],
+  "hasCredential": [
+    { "@type": "EducationalOccupationalCredential", "name": "Google Data Analyst Certification" },
+    { "@type": "EducationalOccupationalCredential", "name": "Digital Marketing & E-commerce Certification" }
   ]
 }
 </script>
@@ -65,15 +86,38 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 {
   "@context": "https://schema.org",
   "@type": "ProfessionalService",
-  "name": "bahri.studio · Paid Media & Transformation Digitale",
+  "name": "bahri.studio · Paid Media & UX/UI",
   "provider": { "@type": "Person", "name": "Moustafa Bahri" },
-  "areaServed": ["Paris","Île-de-France","France","Europe"],
-  "serviceType": ["Consultant Google Ads","Consultant Meta Ads","Audit Paid Media","Transformation Digitale","Optimisation ROAS","Tracking GTM Conversions API","UX/UI landing page","SEO + AIO"],
+  "areaServed": ["FR","EU"],
+  "serviceType": ["Digital Transformation","Google Ads management","Meta Ads management","Paid Media audit","Conversion Rate Optimization","UX/UI design","Landing page design","SEO and AI Overview content","Fractional Head of Digital and Product"],
   "offers": [
-    { "@type": "Offer", "name": "Audit & Stratégie", "priceSpecification": { "@type": "PriceSpecification", "minPrice": "1500", "priceCurrency": "EUR" } },
-    { "@type": "Offer", "name": "Build full-stack", "priceSpecification": { "@type": "PriceSpecification", "minPrice": "3000", "priceCurrency": "EUR" } },
-    { "@type": "Offer", "name": "Transformation Digitale (3 mois min.)", "priceSpecification": { "@type": "PriceSpecification", "minPrice": "4500", "priceCurrency": "EUR" } }
+    { "@type": "Offer", "name": "Audit & Strategy",                       "priceSpecification": { "@type": "PriceSpecification", "minPrice": "1500", "priceCurrency": "EUR" } },
+    { "@type": "Offer", "name": "Full-Stack Build",                       "priceSpecification": { "@type": "PriceSpecification", "minPrice": "3000", "priceCurrency": "EUR" } },
+    { "@type": "Offer", "name": "Digital Transformation (3-mo min.)",     "priceSpecification": { "@type": "PriceSpecification", "minPrice": "4500", "priceCurrency": "EUR" } }
   ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  "@id": "https://www.bahri.studio/#localbusiness",
+  "name": "bahri.studio",
+  "description": "Google & Meta Ads strategist + Digital Transformation consultant based in Paris, France. 9+ years, €10–100K monthly ad budgets, 47× peak ROAS.",
+  "url": "https://www.bahri.studio",
+  "image": "https://www.bahri.studio/og-image.png",
+  "logo": "https://www.bahri.studio/favicon.svg",
+  "founder": { "@type": "Person", "name": "Moustafa Bahri" },
+  "address": { "@type": "PostalAddress", "addressLocality": "Paris", "postalCode": "75011", "addressCountry": "FR" },
+  "geo": { "@type": "GeoCoordinates", "latitude": 48.8566, "longitude": 2.3522 },
+  "areaServed": ["Paris","Île-de-France","France","European Union","Lebanon","Middle East"],
+  "priceRange": "€€",
+  "openingHoursSpecification": [
+    { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"], "opens": "09:00", "closes": "18:00" }
+  ],
+  "knowsLanguage": ["fr","en","ar"],
+  "currenciesAccepted": "EUR",
+  "paymentAccepted": "Bank transfer, Stripe"
 }
 </script>
 <script type="application/ld+json">
@@ -118,23 +162,29 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link href="https://fonts.googleapis.com/css2?family=Geist+Mono:wght@300;400;500&family=Instrument+Serif&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
-<link rel="stylesheet" href="../styles.css" />
+<link rel="stylesheet" href="/styles.css" />
 </head>
 <body>
 <!-- Google Tag Manager (noscript) -->
 <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-T7ZXHSPC"
 height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
 
+<!-- ─────────────  CURSOR · dot + soft halo (both GPU-only, no blur/blend)  ───────────── -->
+<div class="cursor-dot" aria-hidden="true"></div>
+<div class="cursor-spot" aria-hidden="true"></div>
+
+<!-- ─────────────  NAV  ───────────── -->
 <header class="nav">
-  <a class="brand" href="/fr/">
+  <a class="brand" href="#top">
     <span class="brand-mark">◈</span>
     <span class="brand-name">bahri.studio</span>
   </a>
   <nav class="nav-links">
-    <a href="#projets">Projets</a>
-    <a href="#about">À propos</a>
-    <a href="#prestations">Prestations</a>
-    <a href="#contact" class="nav-cta">Réserver un audit →</a>
+    <a href="#case-studies" data-i18n="nav.work">Work</a>
+    <a href="#about" data-i18n="nav.about">About</a>
+    <a href="#services" data-i18n="nav.services">Services</a>
+    <a href="#contact" class="nav-cta" data-i18n="nav.cta">Book audit →</a>
   </nav>
   <div class="lang-toggle" role="group" aria-label="Langue">
     <a href="/" data-lang="en">EN</a>
@@ -144,10 +194,11 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
 <main id="top">
 
+  <!-- ─────────────  HERO  ───────────── -->
   <section class="hero">
     <div class="hero-meta">
       <span class="dot-live"></span>
-      <span>Disponible · Avril 2026 · partenariats ouverts</span>
+      <span data-i18n="hero.meta">Available · April 2026 · accepting new partnerships</span>
     </div>
 
     <h1 class="hero-title ltr" data-magnetic dir="ltr">
@@ -155,174 +206,455 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <span class="line italic-line"><span class="word italic">Bahri</span></span>
     </h1>
 
-    <p class="hero-role">Consultant Google &amp; Meta Ads · Paid Media · Transformation Digitale · Paris</p>
+    <p class="hero-role" data-i18n="hero.role">Google &amp; Meta Ads Strategist · Paid Media · Digital Transformation · Paris</p>
 
-    <p class="hero-sub">
-      <span class="hl">Google Ads · Meta Ads · UX/UI · Transformation Digitale</span> pour startups internationales sur le marché français. 9&nbsp;ans. Budgets 10–100K€/mois. <span class="hl">ROAS jusqu'à 47×</span>, tracking GA4 + GTM, reporting Looker&nbsp;Studio.
+    <p class="hero-sub" data-i18n="hero.sub">
+      <span class="hl">Google Ads · Meta Ads · UX/UI · Digital Transformation</span> for international startups entering France.
+      9&nbsp;years. €10–100K monthly budgets. <span class="hl">47× peak ROAS</span>, GA4 + GTM tracked, Looker&nbsp;Studio reported.
     </p>
 
     <div class="hero-stats ltr" dir="ltr">
-      <div class="stat"><span class="stat-value"><span class="stat-num">9</span><span class="stat-suffix-mini">+</span></span><span class="stat-label">ans</span></div>
-      <div class="stat"><span class="stat-value"><span class="stat-prefix">€</span><span class="stat-num">10–100K</span></span><span class="stat-label">budget pub mensuel piloté</span></div>
-      <div class="stat"><span class="stat-value"><span class="stat-num">4</span></span><span class="stat-label">cas clients</span></div>
-      <div class="stat"><span class="stat-value"><span class="stat-num">3</span></span><span class="stat-label">langues · AR · EN · FR</span></div>
+      <div class="stat">
+        <span class="stat-value"><span class="stat-num" data-count="9">0</span><span class="stat-suffix-mini">+</span></span>
+        <span class="stat-label" data-i18n="stat.years">years</span>
+      </div>
+      <div class="stat">
+        <span class="stat-value"><span class="stat-prefix">€</span><span class="stat-num">10–100K</span></span>
+        <span class="stat-label" data-i18n="stat.spend">monthly ad spend handled</span>
+      </div>
+      <div class="stat">
+        <span class="stat-value"><span class="stat-num" data-count="4">0</span></span>
+        <span class="stat-label" data-i18n="stat.cases">case studies below</span>
+      </div>
+      <div class="stat">
+        <span class="stat-value"><span class="stat-num">3</span></span>
+        <span class="stat-label" data-i18n="stat.langs">languages · AR · EN · FR</span>
+      </div>
     </div>
 
     <div class="hero-cta">
-      <a class="btn btn-primary" href="https://calendly.com/contact-bahri/15min" target="_blank" rel="noopener">
-        <span>Réserver un audit de 15 min</span>
+      <a class="btn btn-primary" href="#contact">
+        <span data-i18n="hero.cta1">Book a 30-min audit</span>
         <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
       </a>
-      <a class="btn btn-ghost" href="#projets">Voir le travail</a>
+      <a class="btn btn-ghost" href="#case-studies" data-i18n="hero.cta2">See the work</a>
+    </div>
+
+    <div class="hero-scroll">
+      <span data-i18n="hero.scroll">scroll</span>
+      <div class="hero-scroll-line"></div>
     </div>
   </section>
 
+  <!-- ─────────────  TRUST BAR  ───────────── -->
+  <section class="trust">
+    <span class="trust-label" data-i18n="trust.label">trusted by</span>
+    <div class="trust-row ltr" dir="ltr">
+      <span class="trust-logo trust-logo-own" data-client="aiah">AIAH<sup class="trust-badge" data-i18n="badge.own">own</sup></span>
+      <span class="trust-sep">/</span>
+      <span class="trust-logo trust-logo-live" data-client="i-dom-you">I Dom You<sup class="trust-badge trust-badge-live"><span class="live-dot"></span><span data-i18n="badge.live">live</span></sup></span>
+      <span class="trust-sep">/</span>
+      <span class="trust-logo" data-client="parlons-cash">Parlons Cash</span>
+      <span class="trust-sep">/</span>
+      <span class="trust-logo" data-client="protoremane">ProToreMane</span>
+      <span class="trust-sep">/</span>
+      <span class="trust-logo" data-client="novarc">NOVARC</span>
+      <span class="trust-sep">/</span>
+      <span class="trust-logo" data-client="kamila">KAMILA</span>
+    </div>
+  </section>
+
+  <!-- ─────────────  KEYWORD MARQUEE  ───────────── -->
+  <section class="kw-marquee" aria-hidden="true">
+    <div class="kw-track">
+      <span>Digital Transformation</span><span>·</span>
+      <span>Google Ads</span><span>·</span><span>Meta Ads</span><span>·</span><span>LinkedIn Ads</span><span>·</span>
+      <span>ROAS</span><span>·</span><span>CPA</span><span>·</span><span>GA4</span><span>·</span>
+      <span>GTM</span><span>·</span><span>Conversions API</span><span>·</span>
+      <span>Multi-touch Attribution</span><span>·</span>
+      <span>Looker Studio</span><span>·</span>
+      <span>SEA</span><span>·</span><span>SEO</span><span>·</span><span>SEM</span><span>·</span>
+      <span>CRO</span><span>·</span><span>A/B Testing</span><span>·</span>
+      <span>Funnel Optimization</span><span>·</span><span>Growth Marketing</span><span>·</span>
+      <span>Shopify</span><span>·</span><span>E-commerce</span><span>·</span>
+      <span>AI-Powered Campaign Optimization</span><span>·</span>
+      <span>Reporting Automation</span><span>·</span>
+      <span>Google Ads</span><span>·</span><span>Meta Ads</span><span>·</span>
+      <span>ROAS</span><span>·</span><span>CRO</span><span>·</span><span>GA4</span><span>·</span>
+      <span>GTM</span><span>·</span><span>Looker Studio</span><span>·</span>
+      <span>SEA / SEO / SEM</span><span>·</span>
+    </div>
+  </section>
+
+  <!-- ─────────────  CASE STUDIES  ───────────── -->
+  <section class="cases" id="case-studies">
+
+    <div class="section-head">
+      <span class="section-tag" data-i18n="cases.tag">01 · selected work</span>
+      <h2 class="section-title" data-i18n="cases.title">Four cases. Two disciplines. One brain.</h2>
+      <p class="section-sub" data-i18n="cases.sub">Hover the cards. The numbers are hiding in the dark.</p>
+    </div>
+
+    <!-- Case 1 (was 4): AIAH · own product, live build -->
+    <article class="case case-aiah case-live-warm" data-case="4" id="case-4">
+      <div class="case-rail">
+        <span class="case-num">01</span>
+        <span class="case-status case-status-warm"><span class="live-dot"></span><span data-i18n="ui.inProgress">in progress</span></span>
+        <span class="case-disciplines"><span data-i18n="c4.d1">Founder</span><span data-i18n="c4.d2">Built live</span></span>
+      </div>
+      <div class="case-body">
+        <header class="case-head">
+          <h3>AIAH <span class="case-tag case-tag-live-warm"><span class="live-dot"></span><span data-i18n="c4.tag">my product</span></span></h3>
+          <p class="case-role" data-i18n="c4.role">The marketer-turned-founder arc. I own this one · building it in public.</p>
+        </header>
+        <div class="case-grid">
+          <div class="case-block">
+            <span class="block-label" data-i18n="block.what">What it is</span>
+            <p data-i18n="c4.whatP">AIAH · an <strong>AI life companion</strong> that coaches your schedule, meals, budget, and social confidence through daily check-ins and smart nudges, turning your goals into a system you actually follow.</p>
+          </div>
+          <div class="case-block">
+            <span class="block-label" data-i18n="block.why">Why it matters here</span>
+            <p data-i18n="c4.whyP">9 years optimizing other people's funnels taught me what the page must do. AIAH is where I apply that to my own.</p>
+          </div>
+          <div class="case-block reveal-block">
+            <span class="block-label" data-i18n="block.stage">Stage</span>
+            <div class="metric-stack">
+              <div class="metric"><span class="metric-num" data-i18n="c4.m1Num">live build</span><span class="metric-label" data-i18n="c4.m1">in progress</span></div>
+            </div>
+            <a class="reveal-hint reveal-link" href="https://aiah.app" target="_blank" rel="noopener" data-i18n="c4.visit">visit aiah →</a>
+          </div>
+          <div class="case-block">
+            <span class="block-label" data-i18n="block.stack">Stack</span>
+            <p data-i18n="c4.stackP">Next.js · Stripe · i18n · the rest TBA</p>
+          </div>
+        </div>
+        <div class="case-cta-row">
+          <a class="case-cta case-cta-warm case-cta-glow-warm" href="https://aiah.app" target="_blank" rel="noopener">
+            <span data-i18n="c4.cta">Visit aiah.app</span>
+            <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M9 7h8v8"/></svg>
+          </a>
+          <span class="case-cta-pending case-cta-build">
+            <span class="build-dot"></span>
+            <span data-i18n="c4.ctaBuild">building in public</span>
+          </span>
+        </div>
+      </div>
+    </article>
+
+    <!-- Case 2 (was 1): I Dom You -->
+    <article class="case case-live" data-case="1" id="case-1">
+      <div class="case-rail">
+        <span class="case-num">02</span>
+        <span class="case-status"><span class="live-dot"></span><span data-i18n="ui.inProgress">in progress</span></span>
+        <span class="case-disciplines"><span data-i18n="c1.d1">Google Ads</span><span data-i18n="c1.d2">Meta · LinkedIn</span><span data-i18n="c1.d3">Product · UX/UI</span></span>
+      </div>
+      <div class="case-body">
+        <header class="case-head">
+          <h3>I Dom You <span class="case-tag case-tag-live"><span class="live-dot"></span><span data-i18n="c1.tag">live engagement</span></span></h3>
+          <p class="case-role" data-i18n="c1.role"><strong>Head of Digital Marketing &amp; Product.</strong> Both sides at once · 3 ad platforms (Google · Meta · LinkedIn) AND <strong>full product development &amp; management</strong> of the website &amp; mobile app, redesigned and re-engineered end-to-end.</p>
+        </header>
+
+        <div class="case-headline-metrics ltr" dir="ltr">
+          <div class="hm">
+            <span class="hm-num">47<span class="hm-x">×</span></span>
+            <span class="hm-label" data-i18n="c1.hm1">ROAS · Search High Intent</span>
+          </div>
+          <div class="hm">
+            <span class="hm-num">+63<span class="hm-x">%</span></span>
+            <span class="hm-label" data-i18n="c1.hm2">YoY revenue · April vs prior year</span>
+          </div>
+          <div class="hm">
+            <span class="hm-num">71<span class="hm-x">%</span></span>
+            <span class="hm-label" data-i18n="c1.hm3">of all customer traffic = mine</span>
+          </div>
+        </div>
+
+        <div class="case-grid">
+          <div class="case-block">
+            <span class="block-label" data-i18n="block.starting">Starting state</span>
+            <p data-i18n="c1.startingP">12 active campaigns · 3 platforms. 4 campaigns at sub-2× ROAS. <span class="kw">Conversions API</span> ↔ Stripe handoff incomplete · merci-page event missing.</p>
+          </div>
+          <div class="case-block">
+            <span class="block-label" data-i18n="block.approach">Approach</span>
+            <p data-i18n="c1.approachP">Took <strong>end-to-end ownership</strong> of the Paid Media architecture <em>and</em> the product surface it feeds. Re-segmented a fragmented 12-campaign account into a 3-tier funnel-aligned system (High-Intent · Brand · Geo). Reallocated <strong>€1,500+</strong> into top-quartile auctions and instated a negative-keyword governance loop. Rebuilt the full <span class="kw">measurement layer</span> · <span class="kw">GA4</span>, <span class="kw">GTM</span>, <span class="kw">Conversions API</span>, server-side handoff into Stripe · so revenue attribution is closed-loop, not modeled. <strong>On the product side:</strong> drove the full website redesign and the mobile-app overhaul as Product lead · wireframes, IA, copy, dev partnership, ship.</p>
+          </div>
+          <div class="case-block reveal-block">
+            <span class="block-label" data-i18n="block.results">Results</span>
+            <div class="metric-stack">
+              <div class="metric"><span class="metric-num">47×</span><span class="metric-label" data-i18n="c1.m1">ROAS · Search High Intent FR</span></div>
+              <div class="metric"><span class="metric-num">+€7,113</span><span class="metric-label" data-i18n="c1.m2">incremental revenue · 24 days</span></div>
+              <div class="metric"><span class="metric-num">€0.18</span><span class="metric-label" data-i18n="c1.m3">CPC · 18,387 clicks</span></div>
+              <div class="metric"><span class="metric-num">+62.7%</span><span class="metric-label" data-i18n="c1.m4">paying customers YoY</span></div>
+            </div>
+            <span class="reveal-hint" data-i18n="ui.reveal">cursor ↻ reveals</span>
+          </div>
+          <div class="case-block">
+            <span class="block-label" data-i18n="block.stack">Stack</span>
+            <p data-i18n="c1.stackP">Google Ads · Meta Ads · LinkedIn Ads · GA4 · GTM · <span class="kw">Conversions API</span> · Stripe attribution · Looker Studio · Figma (UX/UI) · hand-written HTML/CSS for landing pages · <span class="kw">SEO + AIO</span> copywriting and full-site audit · Claude / AI-assisted ops</p>
+          </div>
+        </div>
+        <div class="case-cta-row">
+          <a class="case-cta case-cta-glow" href="https://idomyou.fr" target="_blank" rel="noopener">
+            <span data-i18n="c1.ctaOld">Visit idomyou.fr · current site</span>
+            <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M9 7h8v8"/></svg>
+          </a>
+          <span class="case-cta-pending case-cta-build">
+            <span class="build-dot"></span>
+            <span data-i18n="c1.ctaBuild">new website under construction</span>
+          </span>
+        </div>
+      </div>
+    </article>
+
+    <!-- Case 3 (was 2): Parlons Cash -->
+    <article class="case" data-case="2" id="case-2">
+      <div class="case-rail">
+        <span class="case-num">03</span>
+        <span class="case-disciplines"><span data-i18n="c2.d1">UX/UI design + audit</span><span data-i18n="c2.d2">SEO + AIO writing</span><span data-i18n="c2.d3">Front-end</span><span data-i18n="c2.d4">Studio outreach</span></span>
+      </div>
+      <div class="case-body">
+        <header class="case-head">
+          <h3>Parlons Cash <span class="case-tag" data-i18n="c2.tag">podcast · finance FR</span></h3>
+          <p class="case-role" data-i18n="c2.role"><strong>Solo build, end-to-end.</strong> A French personal-finance podcast had reach in audio but no digital home. I designed it, wrote it, coded it, audited it, and started landing studios.</p>
+        </header>
+        <div class="case-grid">
+          <div class="case-block">
+            <span class="block-label" data-i18n="block.brief">Brief</span>
+            <p data-i18n="c2.briefP">Turn a podcast brand into a discoverable, monetizable web property. No agency. No team. <strong>One operator, full stack.</strong></p>
+          </div>
+          <div class="case-block">
+            <span class="block-label" data-i18n="block.approach">Approach</span>
+            <p data-i18n="c2.approachP">Designed the full UX/UI in <span class="kw">Figma</span> from blank canvas · IA, hierarchy, conversion path. Hand-wrote the front-end HTML/CSS. Wrote every line of on-page copy with a dual <span class="kw">SEO + AIO</span> lens · structured for Google rankings <em>and</em> for AI Overviews / Perplexity / ChatGPT answer panels. Ran a full pre- and post-launch audit (Core Web Vitals, structured data, internal linking). <strong>Reached out directly to podcast studios</strong> to source guest crossovers and sponsorship leads.</p>
+          </div>
+          <div class="case-block reveal-block">
+            <span class="block-label" data-i18n="block.outcome">Outcome</span>
+            <div class="metric-stack">
+              <div class="metric"><span class="metric-num">100%</span><span class="metric-label" data-i18n="c2.m1">solo · design → code → copy → outreach</span></div>
+              <div class="metric"><span class="metric-num">AIO-ready</span><span class="metric-label" data-i18n="c2.m2">structured for AI answer panels</span></div>
+              <div class="metric"><span class="metric-num">live</span><span class="metric-label" data-i18n="c2.m3">studio partnerships in pipeline</span></div>
+            </div>
+            <span class="reveal-hint" data-i18n="ui.reveal">cursor ↻ reveals</span>
+          </div>
+          <div class="case-block">
+            <span class="block-label" data-i18n="block.stack">Stack</span>
+            <p data-i18n="c2.stackP">Figma (UX/UI design + audit) · hand-written HTML/CSS · <span class="kw">SEO + AIO</span> copywriting · structured data (JSON-LD) · Core Web Vitals audit · Plausible · podcast-studio outreach</p>
+          </div>
+        </div>
+        <div class="case-cta-row">
+          <a class="case-cta" href="https://www.parlonscashpodcast.fr" target="_blank" rel="noopener">
+            <span>Visit parlonscashpodcast.fr</span>
+            <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M9 7h8v8"/></svg>
+          </a>
+        </div>
+      </div>
+    </article>
+
+    <!-- Case 4 (was 3): ProToreMane (FR sport-tech → Japan) -->
+    <article class="case" data-case="3" id="case-3">
+      <div class="case-rail">
+        <span class="case-num">04</span>
+        <span class="case-disciplines"><span data-i18n="c3.d1">Globalization lead</span><span data-i18n="c3.d2">Market research</span><span data-i18n="c3.d3">SEO architecture</span><span data-i18n="c3.d4">Digital go-to-market</span></span>
+      </div>
+      <div class="case-body">
+        <header class="case-head">
+          <h3>ProToreMane <span class="case-tag" data-i18n="c3.tag">FR → JP · sport-tech</span></h3>
+          <p class="case-role" data-i18n="c3.role"><strong>Globalization lead.</strong> Took a French sport-tech product into the Japanese market. Market research, SEO foundation, and the full digital go-to-market plan · built before a single yen is spent.</p>
+        </header>
+        <div class="case-grid">
+          <div class="case-block">
+            <span class="block-label" data-i18n="block.brief">Brief</span>
+            <p data-i18n="c3.briefP">Open the Japanese market for a French sport-tech app · not as a translation, as a culturally native product. Required deep <strong>market research</strong> on the JP sport-tech category, competitor mapping, JP search behavior, and a launch sequence the founders could execute.</p>
+          </div>
+          <div class="case-block">
+            <span class="block-label" data-i18n="block.approach">Approach</span>
+            <p data-i18n="c3.approachP">Led full <span class="kw">market research</span> on the Japanese sport-tech space: category sizing, competitor benchmark, audience segmentation, JP-language search-intent mapping. Designed the <span class="kw">SEO architecture</span> · keyword strategy, structured data, on-site information architecture for both languages. Authored the <strong>complete digital go-to-market plan</strong>: Paid Media phasing, organic growth roadmap, partnership pipeline, KPI tree. Aligned product, engineering, and creative around launch milestones.</p>
+          </div>
+          <div class="case-block reveal-block">
+            <span class="block-label" data-i18n="block.outcome">Outcome</span>
+            <div class="metric-stack">
+              <div class="metric"><span class="metric-num">JP market</span><span class="metric-label" data-i18n="c3.m1">research &amp; positioning locked</span></div>
+              <div class="metric"><span class="metric-num">SEO ready</span><span class="metric-label" data-i18n="c3.m2">bilingual architecture · structured data</span></div>
+              <div class="metric"><span class="metric-num">GTM plan</span><span class="metric-label" data-i18n="c3.m3">paid · organic · partnerships sequenced</span></div>
+              <div class="metric"><span class="metric-num">pre-launch</span><span class="metric-label" data-i18n="c3.m4">awaiting app release</span></div>
+            </div>
+            <span class="reveal-hint" data-i18n="ui.reveal">cursor ↻ reveals</span>
+          </div>
+          <div class="case-block">
+            <span class="block-label" data-i18n="block.stack">Stack</span>
+            <p data-i18n="c3.stackP">Market research · competitor benchmark · JP-language keyword research · SEO architecture · structured data · digital go-to-market plan · localization strategy · Figma · Claude / AI-assisted research ops</p>
+          </div>
+        </div>
+        <div class="case-cta-row">
+          <a class="case-cta" href="https://www.protoremane.com" target="_blank" rel="noopener">
+            <span>Visit protoremane.com</span>
+            <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M9 7h8v8"/></svg>
+          </a>
+          <span class="case-cta-pending" data-i18n="c3.ctaPending">app pre-launch</span>
+        </div>
+      </div>
+    </article>
+
+  </section>
+
+  <!-- ─────────────  ABOUT  ───────────── -->
   <section class="about" id="about">
     <div class="section-head">
-      <span class="section-tag">02 · à propos</span>
-      <h2 class="section-title">Un cerveau. Les deux côtés du funnel.</h2>
+      <span class="section-tag" data-i18n="about.tag">02 · about</span>
+      <h2 class="section-title" data-i18n="about.title">One brain. Both sides of the funnel.</h2>
     </div>
+
     <div class="about-grid">
-      <p class="about-lead">Le Paid Media et la landing page sont un seul produit. Même cerveau des deux côtés &mdash; <span class="hl">le CPA baisse, le ROAS compose.</span></p>
-      <p><strong>9+ ans</strong> · <strong>Consultant Google &amp; Meta Ads</strong> · <strong>budgets 10–100K€/mois</strong>. Tracking <span class="kw">GTM</span> + <span class="kw">Conversions API</span>. Reporting <span class="kw">Looker Studio</span>. Chaque euro mesuré.</p>
-      <p>Les 12 derniers mois en chiffres : <strong>47×</strong> ROAS pic, <strong>+63%</strong> de revenus YoY sur un compte phare, <strong>0,18€</strong> CPC moyen à l'échelle, <strong>71%</strong> du trafic payant = moi.</p>
-      <p>Certifié Google Data Analyst. Master · International Business · USGCI Paris. Trilingue : Arabe · Anglais · Français. Slots limités par trimestre.</p>
-      <address style="font-style:normal;" class="about-meta">Paris 75011 · Île-de-France &amp; Europe · Disponible immédiatement</address>
-      <a class="track-cta" href="../track-record.html">
-        <span>Voir tout le parcours</span>
+      <p class="about-lead" data-i18n="about.lead">
+        Paid Media and the landing page are one product. Same brain on both sides &mdash; <span class="hl">CPA drops, ROAS compounds.</span>
+      </p>
+      <p data-i18n="about.p1">
+        <strong>9+&nbsp;years</strong> · <strong>Google &amp; Meta Ads Strategist</strong> · <strong>10–100K€ monthly budgets</strong>. Tracking on <span class="kw">GTM</span> + <span class="kw">Conversions API</span>. Reporting on <span class="kw">Looker Studio</span>. Every euro measured.
+      </p>
+      <p data-i18n="about.p2">
+        Last 12 months in numbers: <strong>47×</strong> peak ROAS, <strong>+63%</strong> YoY revenue on a flagship account, <strong>€0.18</strong> blended CPC at scale, <strong>71%</strong> of paid traffic = mine.
+      </p>
+      <p data-i18n="about.p3">
+        Google Data Analyst certified. Master · International Business · USGCI Paris. Trilingual: AR · EN · FR. Limited slots per quarter.
+      </p>
+
+      <ul class="about-skills" aria-label="Skills">
+        <li class="skill-flag">Digital Transformation</li>
+        <li class="skill-flag">Fractional Head of Digital + Product</li>
+        <li>Google Ads</li><li>Meta Ads</li><li>LinkedIn Ads</li>
+        <li>ROAS Pilotage</li><li>CPA Reduction</li>
+        <li>GA4</li><li>GTM</li><li>Conversions API</li>
+        <li>Multi-touch Attribution</li>
+        <li>Looker Studio</li><li>SQL</li>
+        <li>SEA / SEO / SEM</li>
+        <li>CRO</li><li>A/B Testing</li>
+        <li>Funnel Optimization</li><li>Growth Marketing</li>
+        <li>Shopify · E-commerce</li>
+        <li>AI-Powered Campaign Optimization</li>
+        <li>UX / UI</li>
+      </ul>
+
+      <p class="about-meta" data-i18n="about.meta">Paris 75011 · Arabic / English / French · Available immediately · Île-de-France &amp; Europe.</p>
+
+      <a class="track-cta" href="track-record.html">
+        <span data-i18n="about.trackCta">View full track record</span>
         <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
       </a>
     </div>
   </section>
 
-  <section class="services" id="prestations">
+  <!-- ─────────────  SERVICES  ───────────── -->
+  <section class="services" id="services">
     <div class="section-head">
-      <span class="section-tag">03 · prestations</span>
-      <h2 class="section-title">Trois profondeurs. Un opérateur.</h2>
-      <p class="section-sub">Paid Media · Tracking · UX/UI · SEO + AIO · Produit. Choisissez la profondeur que votre funnel mérite.</p>
+      <span class="section-tag" data-i18n="services.tag">03 · services</span>
+      <h2 class="section-title" data-i18n="services.title">Three depths. One operator.</h2>
+      <p class="section-sub" data-i18n="services.sub">Paid Media · Tracking · UX/UI · SEO + AIO · Product. Pick the depth your funnel deserves.</p>
     </div>
 
     <div class="service-grid">
+
       <article class="service">
-        <header><span class="service-num">/01</span><h3>Audit &amp; Stratégie</h3></header>
-        <p>Diagnostic complet : <span class="kw">Paid Media</span>, stack tracking, landing pages et surface <span class="kw">SEO + AIO</span>. Vous repartez avec la vérité, priorisée.</p>
+        <header>
+          <span class="service-num">/01</span>
+          <h3 data-i18n="svc1.title">Audit &amp; Strategy</h3>
+        </header>
+        <p data-i18n="svc1.body">Diagnostic across <span class="kw">Paid Media</span>, the tracking stack, landing pages, and the <span class="kw">SEO + AIO</span> surface. You get the truth, prioritized.</p>
         <ul class="service-list">
-          <li>Audit compte · <span class="kw">GA4</span> · <span class="kw">GTM</span> · <span class="kw">Conversions API</span></li>
-          <li>Revue UX + <span class="kw">CRO</span> page par page</li>
-          <li>Plan d'action 90 jours avec objectifs <span class="kw">ROAS</span></li>
+          <li data-i18n="svc1.l1">Account · <span class="kw">GA4</span> · <span class="kw">GTM</span> · <span class="kw">Conversions API</span> audit</li>
+          <li data-i18n="svc1.l2">Page-by-page UX + <span class="kw">CRO</span> review</li>
+          <li data-i18n="svc1.l3">90-day action plan with <span class="kw">ROAS</span> targets</li>
         </ul>
-        <div class="service-price"><span class="price-num">à partir de 1 500</span><span class="price-cur">€</span></div>
-        <a class="service-cta" href="#contact">Demander le scope →</a>
+        <div class="service-price">
+          <span class="price-from" data-i18n="svc.from">from</span>
+          <span class="price-num">1 500</span><span class="price-cur">€</span>
+        </div>
+        <a class="service-cta" href="#contact" data-i18n="svc.cta">Get scope →</a>
+      </article>
+
+      <article class="service">
+        <header>
+          <span class="service-num">/02</span>
+          <h3 data-i18n="svc2.title">Full-Stack Build</h3>
+        </header>
+        <p data-i18n="svc2.body">Zero → launch. Account structure · ad copy · full <span class="kw">tracking stack</span> · landing-page UX/UI · <span class="kw">SEO + AIO</span> copy. Live, instrumented system you own.</p>
+        <ul class="service-list">
+          <li data-i18n="svc2.l1">Account &amp; <span class="kw">conversion tracking</span> setup</li>
+          <li data-i18n="svc2.l2">Ad copy + creative direction</li>
+          <li data-i18n="svc2.l3">Landing-page UX/UI + hand-coded build</li>
+          <li data-i18n="svc2.l4"><span class="kw">SEO + AIO</span> copy + structured data</li>
+          <li data-i18n="svc2.l5">2 weeks of post-launch tuning</li>
+        </ul>
+        <div class="service-price">
+          <span class="price-from" data-i18n="svc.from">from</span>
+          <span class="price-num">3 000</span><span class="price-cur">€</span>
+        </div>
+        <a class="service-cta" href="#contact" data-i18n="svc.cta">Get scope →</a>
       </article>
 
       <article class="service service-featured">
-        <header><span class="service-num">/02</span><h3>Build full-stack</h3><span class="service-flag">le plus pris</span></header>
-        <p>Zéro → lancement. Structure du compte · ad copy · <span class="kw">stack tracking</span> complète · UX/UI landing-page · copy <span class="kw">SEO + AIO</span>. Système live, instrumenté, qui vous appartient.</p>
-        <ul class="service-list">
-          <li>Setup compte &amp; <span class="kw">tracking de conversion</span></li>
-          <li>Ad copy + direction créative</li>
-          <li>UX/UI landing-page écrite à la main</li>
-          <li>Copy <span class="kw">SEO + AIO</span> + données structurées</li>
-          <li>2 semaines de tuning post-lancement</li>
-        </ul>
-        <div class="service-price"><span class="price-num">à partir de 3 000</span><span class="price-cur">€</span></div>
-        <a class="service-cta" href="#contact">Démarrer un build →</a>
-      </article>
-
-      <article class="service">
-        <header><span class="service-num">/03</span><h3>Transformation Digitale</h3></header>
-        <p>En tant que <strong>Head of Digital + Produit fractionné</strong>. Même périmètre que sur I Dom You : Paid Media, mesure, UX/UI site &amp; app, copy <span class="kw">SEO + AIO</span>, et la roadmap qui relie tout ça.</p>
-        <ul class="service-list">
-          <li>Paid Media · Google · Meta · LinkedIn</li>
-          <li>Infra tracking GA4 + GTM + Conversions API server-side</li>
-          <li>UX/UI du site + app mobile</li>
-          <li>Roadmap produit + partenariat dev</li>
-          <li>OKRs trimestriels · livraison hebdo</li>
-          <li>Engagement minimum 3 mois</li>
-        </ul>
-        <div class="service-price"><span class="price-num">à partir de 4 500</span><span class="price-cur">€</span><span class="price-per">/ mois</span></div>
-        <a class="service-cta" href="#contact">Discuter retainer →</a>
-      </article>
-    </div>
-  </section>
-
-  <section class="cases" id="projets">
-    <div class="section-head">
-      <span class="section-tag">04 · sélection de projets</span>
-      <h2 class="section-title">Quatre cas. Deux disciplines. Un cerveau.</h2>
-    </div>
-
-    <article class="case">
-      <div class="case-body">
-        <header class="case-head">
-          <h3>I Dom You <span class="case-tag">mission en cours</span></h3>
-          <p class="case-role"><strong>Responsable Marketing Digital &amp; Produit.</strong> 3 plateformes pub (Google · Meta · LinkedIn) + management produit complet du site et de l'app mobile.</p>
+        <header>
+          <span class="service-num">/03</span>
+          <h3 data-i18n="svc3.title">Digital Transformation</h3>
+          <span class="service-flag" data-i18n="svc3.flag">flagship</span>
         </header>
-        <div class="case-headline-metrics ltr" dir="ltr">
-          <div class="hm"><span class="hm-num">47<span class="hm-x">×</span></span><span class="hm-label">ROAS · Search High-Intent FR</span></div>
-          <div class="hm"><span class="hm-num">+63<span class="hm-x">%</span></span><span class="hm-label">revenus YoY</span></div>
-          <div class="hm"><span class="hm-num">71<span class="hm-x">%</span></span><span class="hm-label">trafic clients = moi</span></div>
+        <p data-i18n="svc3.body">Acting as your <strong>fractional Head of Digital + Product</strong>. Same scope I run for I Dom You: Paid Media, the measurement layer, UX/UI of site &amp; app, the <span class="kw">SEO + AIO</span> copy, and the roadmap that connects them.</p>
+        <ul class="service-list">
+          <li data-i18n="svc3.l1">Paid Media · Google · Meta · LinkedIn</li>
+          <li data-i18n="svc3.l2">Tracking infra · <span class="kw">GA4</span> · <span class="kw">GTM</span> · <span class="kw">Conversions API</span> · server-side</li>
+          <li data-i18n="svc3.l3">UX/UI of website + mobile app</li>
+          <li data-i18n="svc3.l4"><span class="kw">SEO + AIO</span> copy + full-site audit</li>
+          <li data-i18n="svc3.l5">Product roadmap + dev partnership</li>
+          <li data-i18n="svc3.l6">Quarterly OKRs · weekly delivery · monthly board reporting</li>
+          <li data-i18n="svc3.l7">3-month minimum</li>
+        </ul>
+        <div class="service-price">
+          <span class="price-from" data-i18n="svc.from">from</span>
+          <span class="price-num">4 500</span><span class="price-cur">€</span><span class="price-per" data-i18n="svc.perMo">/ mo</span>
         </div>
-        <p>Compte fragmenté de 12 campagnes restructuré en système 3 niveaux (High-Intent · Brand · Geo). Réalloué <strong>1 500€+</strong> vers les enchères du top quartile. Reconstruit toute la couche de mesure (GA4, GTM, Conversions API, server-side vers Stripe). Côté produit : refonte du site web et overhaul de l'app mobile en tant que Product lead.</p>
-      </div>
-    </article>
+        <a class="service-cta" href="#contact" data-i18n="svc.cta">Get scope →</a>
+        <a class="service-credit" href="#case-1" data-i18n="svc3.usedBy">Used by I Dom You ↗</a>
+      </article>
 
-    <article class="case">
-      <div class="case-body">
-        <header class="case-head"><h3>Parlons Cash <span class="case-tag">podcast finance FR</span></h3>
-        <p class="case-role">Build solo, de bout en bout. Design UX/UI Figma, code HTML/CSS écrit à la main, copy SEO + AIO, outreach studios.</p></header>
-        <p>Transformer une marque podcast en propriété web découvrable et monétisable. Pas d'agence, pas d'équipe. Un opérateur full-stack. Approche directe des studios podcast pour partenariats et leads sponsoring.</p>
-      </div>
-    </article>
-
-    <article class="case">
-      <div class="case-body">
-        <header class="case-head"><h3>ProToreMane <span class="case-tag">FR → JP</span></h3>
-        <p class="case-role">Lead globalisation. Étude de marché, fondations SEO, plan digital go-to-market complet pour le marché japonais.</p></header>
-        <p>Ouvrir le marché japonais pour une app sport-tech française · pas comme une traduction, mais comme un produit culturellement natif. Étude de marché complète, mapping concurrentiel, search-intent en japonais, plan de séquencement Paid + organique + partenariats.</p>
-      </div>
-    </article>
-
-    <article class="case">
-      <div class="case-body">
-        <header class="case-head"><h3>AIAH <span class="case-tag">mon produit</span></h3>
-        <p class="case-role">Le passage de marketeur à fondateur. Compagnon de vie IA · check-ins quotidiens, agenda, repas, budget, confiance sociale.</p></header>
-        <p>9 ans à optimiser les funnels des autres m'ont appris ce que la page doit faire. AIAH, c'est là que je l'applique à la mienne. Stack : Next.js, Stripe, i18n. Build live, en public.</p>
-      </div>
-    </article>
+    </div>
   </section>
 
+  <!-- ─────────────  CONTACT  ───────────── -->
   <section class="contact" id="contact">
     <div class="contact-inner">
-      <span class="section-tag">05 · on en parle</span>
-      <h2 class="contact-headline ltr" dir="ltr"><span>Lisons</span> <em>ce que vos données disent.</em></h2>
-      <p class="contact-sub">15 minutes. Screen-share sur votre compte. Vous repartez avec 3 chiffres et 3 prochaines actions.</p>
+      <span class="section-tag" data-i18n="contact.tag">04 · let's talk</span>
+      <h2 class="contact-headline ltr" dir="ltr">
+        <span data-magnetic data-i18n="contact.h1">Let's read</span>
+        <em data-i18n="contact.h2">what your data says.</em>
+      </h2>
+      <p class="contact-sub" data-i18n="contact.sub">15 minutes. Screen-share on your account. You leave with 3 numbers and 3 next moves.</p>
       <div class="contact-actions">
-        <a class="btn btn-primary btn-lg" href="https://calendly.com/contact-bahri/15min" target="_blank" rel="noopener">
-          <span>Réserver sur Calendly</span>
+        <a class="btn btn-primary btn-lg" href="https://calendly.com/contact-bahri/30min" target="_blank" rel="noopener" data-calendly>
+          <span data-i18n="contact.cta1">Book on Calendly</span>
           <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
         </a>
         <a class="btn btn-ghost btn-lg" href="mailto:contact@bahri.studio">
           <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg>
-          <span>contact@bahri.studio</span>
+          <span data-i18n="contact.cta2">contact@bahri.studio</span>
         </a>
       </div>
-      <div class="contact-meta"><span>Réponse sous 24h · Lun–Ven · Paris (CET)</span></div>
+      <div class="contact-meta">
+        <span data-i18n="contact.meta">Replying within 24h · Mon–Fri · Paris (CET)</span>
+      </div>
     </div>
   </section>
 
+  <!-- ─────────────  FOOTER  ───────────── -->
   <footer class="foot">
     <div class="foot-row">
       <span>© 2026 Moustafa Bahri · <a href="/" class="foot-link">bahri.studio</a></span>
-      <span class="foot-mid">— Construit en live, à la main —</span>
-      <span>Paris · Dernière mise à jour <time datetime="2026-04-26" data-auto-updated>26.04.2026</time></span>
+      <span class="foot-mid" data-i18n="footer.mid">— Built live, by hand —</span>
+      <span><span data-i18n="footer.location">Paris · Last updated</span> <time datetime="2026-04-26" data-auto-updated>26.04.2026</time></span>
     </div>
   </footer>
 
 </main>
 
-<script src="../app.js" defer></script>
-<script src="../auto-date.js" defer></script>
+<script src="/app.js" defer></script>
+<script src="/auto-date.js" defer></script>
 <!-- Vercel Web Analytics + Speed Insights -->
 <script defer src="/_vercel/insights/script.js"></script>
 <script defer src="/_vercel/speed-insights/script.js"></script>

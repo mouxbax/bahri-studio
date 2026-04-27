@@ -109,13 +109,18 @@ img,svg{ display:block; max-width:100%; }
 .nav-links a{ position:relative; }
 .nav-links a:hover{ color:var(--txt); }
 .nav-links .nav-cta{ color:var(--accent); }
-.lang-toggle{ display:flex; gap:2px; padding:3px; border:1px solid var(--line); border-radius:999px; font-family:var(--mono); font-size:11px; }
+html[data-loading] body{ visibility:hidden; }
+html[data-loading]{ background:var(--bg); }
+
+.lang-toggle{ display:inline-flex; gap:2px; padding:3px; border:1px solid var(--line); border-radius:999px; font-family:var(--mono); font-size:11px; letter-spacing:0.04em; }
 .lang-toggle button,
-.lang-toggle a{ padding:5px 10px; border-radius:999px; color:var(--txt-mute); transition:all .18s; text-decoration:none; display:inline-flex; align-items:center; cursor:pointer; background:transparent; border:0; font:inherit; line-height:1; }
+.lang-toggle a{ display:inline-flex; align-items:center; justify-content:center; min-width:34px; height:24px; padding:0 11px; border-radius:999px; color:var(--txt-mute); background:transparent; border:0; font:inherit; line-height:1; cursor:pointer; text-decoration:none; transition:background .22s ease, color .22s ease; }
 .lang-toggle button.active,
 .lang-toggle a.active{ background:var(--txt); color:var(--bg); }
 .lang-toggle button:hover:not(.active),
-.lang-toggle a:hover:not(.active){ color:var(--txt); }
+.lang-toggle a:hover:not(.active){ color:var(--txt); background:rgba(255,255,255,0.04); }
+.lang-toggle button:focus-visible,
+.lang-toggle a:focus-visible{ outline:1px solid var(--accent); outline-offset:2px; }
 
 /* ───────────  LAYOUT BASE  ─────────── */
 main{ position:relative; z-index:3; }

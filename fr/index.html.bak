@@ -1,0 +1,330 @@
+<!doctype html>
+<html lang="fr" data-theme="dark">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+<!-- Consent Mode v2 (must load BEFORE GTM) -->
+<script src="../consent.js"></script>
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-T7ZXHSPC');</script>
+<!-- End Google Tag Manager -->
+<title>Consultant Google Ads &amp; Meta Ads · Paris | Moustafa Bahri</title>
+<meta name="description" content="Consultant freelance Google Ads &amp; Meta Ads à Paris. 9 ans, budgets 10–100K€/mois, ROAS jusqu'à 47×. GTM, Conversions API, Looker Studio. Audit gratuit en 15 min." />
+<meta name="keywords" content="consultant Google Ads Paris, freelance Meta Ads France, expert Paid Media Paris, stratège digital Paris, transformation digitale Paris, fractional Head of Digital, ROAS, GTM, Conversions API, GA4, Looker Studio" />
+<meta name="author" content="Moustafa Bahri" />
+<meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1" />
+<link rel="canonical" href="https://www.bahri.studio/fr/" />
+<link rel="alternate" hreflang="en" href="https://www.bahri.studio/" />
+<link rel="alternate" hreflang="fr" href="https://www.bahri.studio/fr/" />
+<link rel="alternate" hreflang="x-default" href="https://www.bahri.studio/" />
+<link rel="icon" type="image/svg+xml" href="../favicon.svg" />
+<link rel="icon" type="image/png" sizes="32x32" href="../favicon-32x32.png" />
+<link rel="icon" type="image/png" sizes="16x16" href="../favicon-16x16.png" />
+<link rel="apple-touch-icon" sizes="180x180" href="../apple-touch-icon.png" />
+<link rel="manifest" href="../site.webmanifest" />
+<meta name="theme-color" content="#07070a" />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://www.bahri.studio/fr/" />
+<meta property="og:site_name" content="bahri.studio" />
+<meta property="og:locale" content="fr_FR" />
+<meta property="og:locale:alternate" content="en_US" />
+<meta property="og:title" content="Consultant Google Ads &amp; Meta Ads · Paris | Moustafa Bahri" />
+<meta property="og:description" content="9 ans en Paid Media. Budgets 10–100K€/mois, ROAS jusqu'à 47×. GTM, Conversions API, Looker Studio. Audit gratuit en 15 min." />
+<meta property="og:image" content="https://www.bahri.studio/og-image.png" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+<meta property="og:image:alt" content="Moustafa Bahri — Consultant Google &amp; Meta Ads · Paris" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="Consultant Google Ads &amp; Meta Ads · Paris | Moustafa Bahri" />
+<meta name="twitter:description" content="9 ans en Paid Media. ROAS jusqu'à 47×. Audit gratuit en 15 min." />
+<meta name="twitter:image" content="https://www.bahri.studio/og-image.png" />
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "@id": "https://www.bahri.studio/#person",
+  "name": "Moustafa Bahri",
+  "jobTitle": "Consultant Google & Meta Ads · Paid Media · Transformation Digitale",
+  "url": "https://www.bahri.studio/fr/",
+  "image": "https://www.bahri.studio/og-image.png",
+  "email": "contact@bahri.studio",
+  "address": { "@type": "PostalAddress", "addressLocality": "Paris", "postalCode": "75011", "addressCountry": "FR" },
+  "knowsLanguage": ["fr","en","ar"],
+  "sameAs": [
+    "https://www.linkedin.com/in/moustafabahri",
+    "https://github.com/mouxbax",
+    "https://calendly.com/contact-bahri"
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ProfessionalService",
+  "name": "bahri.studio · Paid Media & Transformation Digitale",
+  "provider": { "@type": "Person", "name": "Moustafa Bahri" },
+  "areaServed": ["Paris","Île-de-France","France","Europe"],
+  "serviceType": ["Consultant Google Ads","Consultant Meta Ads","Audit Paid Media","Transformation Digitale","Optimisation ROAS","Tracking GTM Conversions API","UX/UI landing page","SEO + AIO"],
+  "offers": [
+    { "@type": "Offer", "name": "Audit & Stratégie", "priceSpecification": { "@type": "PriceSpecification", "minPrice": "1500", "priceCurrency": "EUR" } },
+    { "@type": "Offer", "name": "Build full-stack", "priceSpecification": { "@type": "PriceSpecification", "minPrice": "3000", "priceCurrency": "EUR" } },
+    { "@type": "Offer", "name": "Transformation Digitale (3 mois min.)", "priceSpecification": { "@type": "PriceSpecification", "minPrice": "4500", "priceCurrency": "EUR" } }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "inLanguage": "fr",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Qui est Moustafa Bahri ?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Moustafa Bahri est consultant indépendant Google Ads et Meta Ads basé à Paris, France. 9+ ans d'expérience à piloter des budgets publicitaires de 10 à 100K€/mois pour des startups internationales s'attaquant au marché français. ROAS pic de 47× sur Search High-Intent. Trilingue (français, anglais, arabe), certifié Google Data Analyst." }
+    },
+    {
+      "@type": "Question",
+      "name": "Quels services propose bahri.studio ?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Trois formats : (1) Audit & Stratégie à partir de 1 500€ — diagnostic complet du compte et des landing pages avec plan d'action priorisé ; (2) Build full-stack à partir de 3 000€ — création de campagnes de zéro avec stack tracking complète (GTM, Conversions API, attribution) et UX/UI ; (3) Transformation Digitale en retainer à partir de 4 500€/mois (3 mois minimum) — Paid Media + produit en continu." }
+    },
+    {
+      "@type": "Question",
+      "name": "Quel ROAS Moustafa Bahri obtient-il ?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Benchmark récent sur le compte phare I Dom You : 47× ROAS sur Search High-Intent FR, +63% de revenus YoY, 0,18€ CPC moyen à l'échelle, 71% du trafic clients payants attribué aux campagnes pilotées. Les résultats varient selon le secteur, le budget et la maturité du tracking." }
+    },
+    {
+      "@type": "Question",
+      "name": "Travaillez-vous avec des clients hors France ?",
+      "acceptedAnswer": { "@type": "Answer", "text": "La spécialité, ce sont les startups internationales qui s'attaquent au marché français. Clients récents venus de Tokyo (ProToreMane), du Liban (United Sports of Lebanon, KAMILA), d'Europe (NOVARC e-commerce). Communication possible en français, anglais ou arabe." }
+    },
+    {
+      "@type": "Question",
+      "name": "Quelle stack de tracking installez-vous ?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Google Tag Manager pour l'orchestration des tags, GA4 pour l'analytics, Conversions API pour le tracking server-side first-party (intégrations Stripe + hooks merci-page custom), attribution multi-touch pour le crédit cross-canal, et tableaux de bord Looker Studio pour le client. Stack complète prête au server-side et au CNAME pour le first-party." }
+    },
+    {
+      "@type": "Question",
+      "name": "Comment réserver un audit ?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Audit gratuit de 15 minutes sur https://calendly.com/contact-bahri/15min ou par email à contact@bahri.studio. Premier appel en screen-share sur votre compte Google Ads ou Meta Ads ; vous repartez avec 3 chiffres concrets et 3 prochaines actions." }
+    }
+  ]
+}
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Geist+Mono:wght@300;400;500&family=Instrument+Serif&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="../styles.css" />
+</head>
+<body>
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-T7ZXHSPC"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+
+<header class="nav">
+  <a class="brand" href="/fr/">
+    <span class="brand-mark">◈</span>
+    <span class="brand-name">bahri.studio</span>
+  </a>
+  <nav class="nav-links">
+    <a href="#projets">Projets</a>
+    <a href="#about">À propos</a>
+    <a href="#prestations">Prestations</a>
+    <a href="#contact" class="nav-cta">Réserver un audit →</a>
+  </nav>
+  <div class="lang-toggle" role="group" aria-label="Langue">
+    <a href="/" data-lang="en">EN</a>
+    <button data-lang="fr" class="active">FR</button>
+  </div>
+</header>
+
+<main id="top">
+
+  <section class="hero">
+    <div class="hero-meta">
+      <span class="dot-live"></span>
+      <span>Disponible · Avril 2026 · partenariats ouverts</span>
+    </div>
+
+    <h1 class="hero-title ltr" data-magnetic dir="ltr">
+      <span class="line"><span class="word">Moustafa</span></span>
+      <span class="line italic-line"><span class="word italic">Bahri</span></span>
+    </h1>
+
+    <p class="hero-role">Consultant Google &amp; Meta Ads · Paid Media · Transformation Digitale · Paris</p>
+
+    <p class="hero-sub">
+      <span class="hl">Google Ads · Meta Ads · UX/UI · Transformation Digitale</span> pour startups internationales sur le marché français. 9&nbsp;ans. Budgets 10–100K€/mois. <span class="hl">ROAS jusqu'à 47×</span>, tracking GA4 + GTM, reporting Looker&nbsp;Studio.
+    </p>
+
+    <div class="hero-stats ltr" dir="ltr">
+      <div class="stat"><span class="stat-value"><span class="stat-num">9</span><span class="stat-suffix-mini">+</span></span><span class="stat-label">ans</span></div>
+      <div class="stat"><span class="stat-value"><span class="stat-prefix">€</span><span class="stat-num">10–100K</span></span><span class="stat-label">budget pub mensuel piloté</span></div>
+      <div class="stat"><span class="stat-value"><span class="stat-num">4</span></span><span class="stat-label">cas clients</span></div>
+      <div class="stat"><span class="stat-value"><span class="stat-num">3</span></span><span class="stat-label">langues · AR · EN · FR</span></div>
+    </div>
+
+    <div class="hero-cta">
+      <a class="btn btn-primary" href="https://calendly.com/contact-bahri/15min" target="_blank" rel="noopener">
+        <span>Réserver un audit de 15 min</span>
+        <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+      </a>
+      <a class="btn btn-ghost" href="#projets">Voir le travail</a>
+    </div>
+  </section>
+
+  <section class="about" id="about">
+    <div class="section-head">
+      <span class="section-tag">02 · à propos</span>
+      <h2 class="section-title">Un cerveau. Les deux côtés du funnel.</h2>
+    </div>
+    <div class="about-grid">
+      <p class="about-lead">Le Paid Media et la landing page sont un seul produit. Même cerveau des deux côtés &mdash; <span class="hl">le CPA baisse, le ROAS compose.</span></p>
+      <p><strong>9+ ans</strong> · <strong>Consultant Google &amp; Meta Ads</strong> · <strong>budgets 10–100K€/mois</strong>. Tracking <span class="kw">GTM</span> + <span class="kw">Conversions API</span>. Reporting <span class="kw">Looker Studio</span>. Chaque euro mesuré.</p>
+      <p>Les 12 derniers mois en chiffres : <strong>47×</strong> ROAS pic, <strong>+63%</strong> de revenus YoY sur un compte phare, <strong>0,18€</strong> CPC moyen à l'échelle, <strong>71%</strong> du trafic payant = moi.</p>
+      <p>Certifié Google Data Analyst. Master · International Business · USGCI Paris. Trilingue : Arabe · Anglais · Français. Slots limités par trimestre.</p>
+      <address style="font-style:normal;" class="about-meta">Paris 75011 · Île-de-France &amp; Europe · Disponible immédiatement</address>
+      <a class="track-cta" href="../track-record.html">
+        <span>Voir tout le parcours</span>
+        <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+      </a>
+    </div>
+  </section>
+
+  <section class="services" id="prestations">
+    <div class="section-head">
+      <span class="section-tag">03 · prestations</span>
+      <h2 class="section-title">Trois profondeurs. Un opérateur.</h2>
+      <p class="section-sub">Paid Media · Tracking · UX/UI · SEO + AIO · Produit. Choisissez la profondeur que votre funnel mérite.</p>
+    </div>
+
+    <div class="service-grid">
+      <article class="service">
+        <header><span class="service-num">/01</span><h3>Audit &amp; Stratégie</h3></header>
+        <p>Diagnostic complet : <span class="kw">Paid Media</span>, stack tracking, landing pages et surface <span class="kw">SEO + AIO</span>. Vous repartez avec la vérité, priorisée.</p>
+        <ul class="service-list">
+          <li>Audit compte · <span class="kw">GA4</span> · <span class="kw">GTM</span> · <span class="kw">Conversions API</span></li>
+          <li>Revue UX + <span class="kw">CRO</span> page par page</li>
+          <li>Plan d'action 90 jours avec objectifs <span class="kw">ROAS</span></li>
+        </ul>
+        <div class="service-price"><span class="price-num">à partir de 1 500</span><span class="price-cur">€</span></div>
+        <a class="service-cta" href="#contact">Demander le scope →</a>
+      </article>
+
+      <article class="service service-featured">
+        <header><span class="service-num">/02</span><h3>Build full-stack</h3><span class="service-flag">le plus pris</span></header>
+        <p>Zéro → lancement. Structure du compte · ad copy · <span class="kw">stack tracking</span> complète · UX/UI landing-page · copy <span class="kw">SEO + AIO</span>. Système live, instrumenté, qui vous appartient.</p>
+        <ul class="service-list">
+          <li>Setup compte &amp; <span class="kw">tracking de conversion</span></li>
+          <li>Ad copy + direction créative</li>
+          <li>UX/UI landing-page écrite à la main</li>
+          <li>Copy <span class="kw">SEO + AIO</span> + données structurées</li>
+          <li>2 semaines de tuning post-lancement</li>
+        </ul>
+        <div class="service-price"><span class="price-num">à partir de 3 000</span><span class="price-cur">€</span></div>
+        <a class="service-cta" href="#contact">Démarrer un build →</a>
+      </article>
+
+      <article class="service">
+        <header><span class="service-num">/03</span><h3>Transformation Digitale</h3></header>
+        <p>En tant que <strong>Head of Digital + Produit fractionné</strong>. Même périmètre que sur I Dom You : Paid Media, mesure, UX/UI site &amp; app, copy <span class="kw">SEO + AIO</span>, et la roadmap qui relie tout ça.</p>
+        <ul class="service-list">
+          <li>Paid Media · Google · Meta · LinkedIn</li>
+          <li>Infra tracking GA4 + GTM + Conversions API server-side</li>
+          <li>UX/UI du site + app mobile</li>
+          <li>Roadmap produit + partenariat dev</li>
+          <li>OKRs trimestriels · livraison hebdo</li>
+          <li>Engagement minimum 3 mois</li>
+        </ul>
+        <div class="service-price"><span class="price-num">à partir de 4 500</span><span class="price-cur">€</span><span class="price-per">/ mois</span></div>
+        <a class="service-cta" href="#contact">Discuter retainer →</a>
+      </article>
+    </div>
+  </section>
+
+  <section class="cases" id="projets">
+    <div class="section-head">
+      <span class="section-tag">04 · sélection de projets</span>
+      <h2 class="section-title">Quatre cas. Deux disciplines. Un cerveau.</h2>
+    </div>
+
+    <article class="case">
+      <div class="case-body">
+        <header class="case-head">
+          <h3>I Dom You <span class="case-tag">mission en cours</span></h3>
+          <p class="case-role"><strong>Responsable Marketing Digital &amp; Produit.</strong> 3 plateformes pub (Google · Meta · LinkedIn) + management produit complet du site et de l'app mobile.</p>
+        </header>
+        <div class="case-headline-metrics ltr" dir="ltr">
+          <div class="hm"><span class="hm-num">47<span class="hm-x">×</span></span><span class="hm-label">ROAS · Search High-Intent FR</span></div>
+          <div class="hm"><span class="hm-num">+63<span class="hm-x">%</span></span><span class="hm-label">revenus YoY</span></div>
+          <div class="hm"><span class="hm-num">71<span class="hm-x">%</span></span><span class="hm-label">trafic clients = moi</span></div>
+        </div>
+        <p>Compte fragmenté de 12 campagnes restructuré en système 3 niveaux (High-Intent · Brand · Geo). Réalloué <strong>1 500€+</strong> vers les enchères du top quartile. Reconstruit toute la couche de mesure (GA4, GTM, Conversions API, server-side vers Stripe). Côté produit : refonte du site web et overhaul de l'app mobile en tant que Product lead.</p>
+      </div>
+    </article>
+
+    <article class="case">
+      <div class="case-body">
+        <header class="case-head"><h3>Parlons Cash <span class="case-tag">podcast finance FR</span></h3>
+        <p class="case-role">Build solo, de bout en bout. Design UX/UI Figma, code HTML/CSS écrit à la main, copy SEO + AIO, outreach studios.</p></header>
+        <p>Transformer une marque podcast en propriété web découvrable et monétisable. Pas d'agence, pas d'équipe. Un opérateur full-stack. Approche directe des studios podcast pour partenariats et leads sponsoring.</p>
+      </div>
+    </article>
+
+    <article class="case">
+      <div class="case-body">
+        <header class="case-head"><h3>ProToreMane <span class="case-tag">FR → JP</span></h3>
+        <p class="case-role">Lead globalisation. Étude de marché, fondations SEO, plan digital go-to-market complet pour le marché japonais.</p></header>
+        <p>Ouvrir le marché japonais pour une app sport-tech française · pas comme une traduction, mais comme un produit culturellement natif. Étude de marché complète, mapping concurrentiel, search-intent en japonais, plan de séquencement Paid + organique + partenariats.</p>
+      </div>
+    </article>
+
+    <article class="case">
+      <div class="case-body">
+        <header class="case-head"><h3>AIAH <span class="case-tag">mon produit</span></h3>
+        <p class="case-role">Le passage de marketeur à fondateur. Compagnon de vie IA · check-ins quotidiens, agenda, repas, budget, confiance sociale.</p></header>
+        <p>9 ans à optimiser les funnels des autres m'ont appris ce que la page doit faire. AIAH, c'est là que je l'applique à la mienne. Stack : Next.js, Stripe, i18n. Build live, en public.</p>
+      </div>
+    </article>
+  </section>
+
+  <section class="contact" id="contact">
+    <div class="contact-inner">
+      <span class="section-tag">05 · on en parle</span>
+      <h2 class="contact-headline ltr" dir="ltr"><span>Lisons</span> <em>ce que vos données disent.</em></h2>
+      <p class="contact-sub">15 minutes. Screen-share sur votre compte. Vous repartez avec 3 chiffres et 3 prochaines actions.</p>
+      <div class="contact-actions">
+        <a class="btn btn-primary btn-lg" href="https://calendly.com/contact-bahri/15min" target="_blank" rel="noopener">
+          <span>Réserver sur Calendly</span>
+          <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+        </a>
+        <a class="btn btn-ghost btn-lg" href="mailto:contact@bahri.studio">
+          <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg>
+          <span>contact@bahri.studio</span>
+        </a>
+      </div>
+      <div class="contact-meta"><span>Réponse sous 24h · Lun–Ven · Paris (CET)</span></div>
+    </div>
+  </section>
+
+  <footer class="foot">
+    <div class="foot-row">
+      <span>© 2026 Moustafa Bahri · <a href="/" class="foot-link">bahri.studio</a></span>
+      <span class="foot-mid">— Construit en live, à la main —</span>
+      <span>Paris · Dernière mise à jour <time datetime="2026-04-26" data-auto-updated>26.04.2026</time></span>
+    </div>
+  </footer>
+
+</main>
+
+<script src="../app.js" defer></script>
+<script src="../auto-date.js" defer></script>
+<!-- Vercel Web Analytics + Speed Insights -->
+<script defer src="/_vercel/insights/script.js"></script>
+<script defer src="/_vercel/speed-insights/script.js"></script>
+</body>
+</html>
