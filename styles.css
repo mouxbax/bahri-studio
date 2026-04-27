@@ -1118,6 +1118,12 @@ section{ padding: 120px var(--pad-x); max-width:var(--max); margin:0 auto; posit
   border-color: var(--accent);
   color: var(--accent);
 }
+.about-skills li.skill-flag{
+  background: rgba(182,255,58,.07);
+  border-color: rgba(182,255,58,.32);
+  color: var(--accent);
+  font-weight: 500;
+}
 
 .about-timeline{
   margin: 36px 0 28px;

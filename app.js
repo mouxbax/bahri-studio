@@ -137,8 +137,8 @@
     en: {
       'nav.work': 'Work', 'nav.about': 'About', 'nav.services': 'Services', 'nav.cta': 'Book audit →',
       'hero.meta': 'Available · April 2026 · accepting new partnerships',
-      'hero.role': 'Google & Meta Ads Strategist · Paid Media & Growth Marketing · Paris',
-      'hero.sub': '<span class="hl">Google Ads · Meta Ads · UX/UI</span> for international startups entering France. 9&nbsp;years. €10–100K monthly budgets. <span class="hl">47× peak ROAS</span>, GA4 + GTM tracked, Looker&nbsp;Studio reported.',
+      'hero.role': 'Google & Meta Ads Strategist · Paid Media · Digital Transformation · Paris',
+      'hero.sub': '<span class="hl">Google Ads · Meta Ads · UX/UI · Digital Transformation</span> for international startups entering France. 9&nbsp;years. €10–100K monthly budgets. <span class="hl">47× peak ROAS</span>, GA4 + GTM tracked, Looker&nbsp;Studio reported.',
       'stat.years': 'years', 'stat.spend': 'monthly ad spend handled',
       'stat.cases': 'case studies below', 'stat.langs': 'languages · AR · EN · FR',
       'hero.cta1': 'Book a 15-min audit', 'hero.cta2': 'See the work', 'hero.scroll': 'scroll',
@@ -280,8 +280,8 @@
     fr: {
       'nav.work': 'Projets', 'nav.about': 'À propos', 'nav.services': 'Prestations', 'nav.cta': 'Réserver un audit →',
       'hero.meta': 'Disponible · Avril 2026 · partenariats ouverts',
-      'hero.role': 'Consultant Google & Meta Ads · Paid Media & Growth Marketing · Paris',
-      'hero.sub': '<span class="hl">Google Ads · Meta Ads · UX/UI</span> pour startups internationales sur le marché français. 9&nbsp;ans. budgets 10–100K€/mois. <span class="hl">ROAS jusqu\'à 47×</span>, tracking GA4 + GTM, reporting Looker&nbsp;Studio.',
+      'hero.role': 'Consultant Google & Meta Ads · Paid Media · Transformation Digitale · Paris',
+      'hero.sub': '<span class="hl">Google Ads · Meta Ads · UX/UI · Transformation Digitale</span> pour startups internationales sur le marché français. 9&nbsp;ans. budgets 10–100K€/mois. <span class="hl">ROAS jusqu\'à 47×</span>, tracking GA4 + GTM, reporting Looker&nbsp;Studio.',
       'stat.years': 'ans', 'stat.spend': 'budget pub mensuel piloté',
       'stat.cases': 'cas clients ci-dessous', 'stat.langs': 'langues · AR · EN · FR',
       'hero.cta1': 'Réserver un audit de 15 min', 'hero.cta2': 'Voir le travail', 'hero.scroll': 'scroll',
