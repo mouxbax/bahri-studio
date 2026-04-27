@@ -11,7 +11,16 @@
   function gtag() { window.dataLayer.push(arguments); }
   window.gtag = window.gtag || gtag;
 
-  // 2. Default-denied for analytics + ads, allow security/functional
+  // 2. Region-aware defaults
+  //    EEA + UK + Switzerland → DENIED (GDPR / UK-GDPR / Swiss FADP require explicit opt-in)
+  //    Everywhere else        → GRANTED (no opt-in law applies; otherwise GTM reports
+  //                                       "0% consent rate · 100% denied" container error)
+  var EEA = [
+    'AT','BE','BG','HR','CY','CZ','DK','EE','FI','FR','DE','GR','HU','IS','IE','IT','LV','LI','LT',
+    'LU','MT','NL','NO','PL','PT','RO','SK','SI','ES','SE','GB','CH'
+  ];
+
+  // a) EEA + UK + CH visitors: deny everything until banner is accepted
   gtag('consent', 'default', {
     'ad_storage': 'denied',
     'ad_user_data': 'denied',
@@ -19,7 +28,18 @@
     'analytics_storage': 'denied',
     'functionality_storage': 'granted',
     'security_storage': 'granted',
+    'region': EEA,
     'wait_for_update': 500
+  });
+
+  // b) Rest of the world: grant by default
+  gtag('consent', 'default', {
+    'ad_storage': 'granted',
+    'ad_user_data': 'granted',
+    'ad_personalization': 'granted',
+    'analytics_storage': 'granted',
+    'functionality_storage': 'granted',
+    'security_storage': 'granted'
   });
 
   // 3. Restore prior choice if user already decided
@@ -49,8 +69,23 @@
     if (banner && banner.parentNode) banner.parentNode.removeChild(banner);
   }
 
+  // Best-effort EEA detection via timezone (no server-side geo on a static site).
+  // If detection fails, assume EEA — safer for compliance.
+  function inEEA() {
+    try {
+      var tz = (Intl.DateTimeFormat().resolvedOptions().timeZone) || '';
+      return tz.indexOf('Europe/') === 0 ||
+             tz === 'Atlantic/Reykjavik' ||
+             tz === 'Atlantic/Faroe' ||
+             tz === 'Atlantic/Canary' ||
+             tz === 'Atlantic/Madeira' ||
+             tz === 'Atlantic/Azores';
+    } catch (e) { return true; }
+  }
+
   function injectBanner() {
-    if (saved) return;
+    if (saved) return;            // already chose
+    if (!inEEA()) return;         // outside EEA — defaults are granted, banner not needed
 
     var styles = [
       '.cookie-banner{',
