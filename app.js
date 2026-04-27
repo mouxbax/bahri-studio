@@ -447,11 +447,10 @@
     });
   });
 
-  /* Auto-init from <html lang>: lets /fr/ render in French without flash of EN */
+  /* Auto-init from <html lang>: /fr/ renders in French; brief flash is acceptable */
   const initLang = (document.documentElement.lang || 'en').slice(0, 2);
   if (initLang !== 'en' && I18N[initLang]) {
     applyLang(initLang);
   }
-  document.documentElement.removeAttribute('data-loading');
 
 })();
