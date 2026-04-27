@@ -1001,14 +1001,19 @@ section{ padding: 120px var(--pad-x); max-width:var(--max); margin:0 auto; posit
   to  { opacity: 1; transform: translate3d(0, 0,    0); }
 }
 
-/* ───────────  PERF: skip rendering offscreen sections  ─────────── */
-.cases, .about, .services, .contact, .kw-marquee, .trust,
-.track-section{
-  content-visibility: auto;
-  contain-intrinsic-size: 1px 800px;
+/* ───────────  PERF: skip rendering offscreen sections  ───────────
+   content-visibility:auto is gated behind @supports because Safari < 18
+   ships it with a rendering bug that leaves sections completely blank.
+   Chrome / Edge / Firefox apply it; Safari falls back to normal rendering. */
+@supports (content-visibility: auto) and (not (-webkit-hyphens: none)) {
+  .cases, .about, .services, .contact, .kw-marquee, .trust,
+  .track-section{
+    content-visibility: auto;
+    contain-intrinsic-size: 1px 800px;
+  }
+  .case{ content-visibility: auto; contain-intrinsic-size: 1px 600px; }
+  .service{ content-visibility: auto; contain-intrinsic-size: 1px 480px; }
 }
-.case{ content-visibility: auto; contain-intrinsic-size: 1px 600px; }
-.service{ content-visibility: auto; contain-intrinsic-size: 1px 480px; }
 
 /* ───────────  LOW-POWER MODE — applied via JS or reduced-motion media  ─────────── */
 .low-power .cursor-dot{ display: none !important; }
