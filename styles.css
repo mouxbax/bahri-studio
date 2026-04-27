@@ -110,9 +110,12 @@ img,svg{ display:block; max-width:100%; }
 .nav-links a:hover{ color:var(--txt); }
 .nav-links .nav-cta{ color:var(--accent); }
 .lang-toggle{ display:flex; gap:2px; padding:3px; border:1px solid var(--line); border-radius:999px; font-family:var(--mono); font-size:11px; }
-.lang-toggle button{ padding:5px 10px; border-radius:999px; color:var(--txt-mute); transition:all .18s; }
-.lang-toggle button.active{ background:var(--txt); color:var(--bg); }
-.lang-toggle button:hover:not(.active){ color:var(--txt); }
+.lang-toggle button,
+.lang-toggle a{ padding:5px 10px; border-radius:999px; color:var(--txt-mute); transition:all .18s; text-decoration:none; display:inline-flex; align-items:center; cursor:pointer; background:transparent; border:0; font:inherit; line-height:1; }
+.lang-toggle button.active,
+.lang-toggle a.active{ background:var(--txt); color:var(--bg); }
+.lang-toggle button:hover:not(.active),
+.lang-toggle a:hover:not(.active){ color:var(--txt); }
 
 /* ───────────  LAYOUT BASE  ─────────── */
 main{ position:relative; z-index:3; }
