@@ -1,0 +1,18 @@
+/* TEAM */
+
+Founder, Strategist, Designer, Developer:  Moustafa Bahri
+Site:                                       https://www.bahri.studio
+Contact:                                    contact@bahri.studio
+Twitter / X:                                @bahri.studio
+LinkedIn:                                   linkedin.com/in/moustafabahri
+From:                                       Paris, France
+Languages:                                  Français · English · العربية
+
+
+/* SITE */
+
+Last update:    April 2026
+Standards:      HTML5 · CSS3 · vanilla JS
+Built with:     hand-written code, Vercel hosting, OVH domain, Cloudflare-class DNS
+Components:     no framework, no tracker bloat, GDPR-compliant Consent Mode v2
+Made in:        Paris (the cafés, mostly)

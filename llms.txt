@@ -1,0 +1,49 @@
+# bahri.studio
+
+> Moustafa Bahri is a Google Ads & Meta Ads strategist based in Paris, France. 9+ years of experience managing €10K–100K monthly ad budgets for international startups entering the French market. Peak ROAS 47× on Search High-Intent campaigns. Trilingual: French, English, Arabic.
+
+## Who
+
+- Name: Moustafa Bahri
+- Role: Independent consultant, Google & Meta Ads strategist, Fractional Head of Digital + Product
+- Based: Paris (75011), France
+- Languages: French (native), English (fluent), Arabic (native, Lebanese)
+- Education: Master International Business · USGCI Paris (2024–2026); Bac+4 Marketing & Digital Communication · LIU Beirut (2014–2017)
+- Certifications: Google Data Analyst, Digital Marketing & E-commerce
+- Contact: contact@bahri.studio
+- Calendly: https://calendly.com/contact-bahri/15min
+- Website: https://www.bahri.studio
+- LinkedIn: https://www.linkedin.com/in/moustafabahri
+- GitHub: https://github.com/mouxbax
+
+## Services
+
+- Audit & Strategy — from €1,500. Full account & landing-page audit, written report, prioritized fix list, 30-min Loom walkthrough.
+- Full-Stack Build — from €3,000. Zero-to-launch campaign build: keyword research, account structure, ad copy, full tracking stack (GTM, Conversions API, attribution), landing-page UX/UI.
+- Digital Transformation Retainer — from €4,500/mo (3-month minimum). Ongoing Paid Media + product, weekly ROAS/CPA optimization, monthly performance review, CRO + A/B testing, Looker Studio dashboards.
+
+## Stack
+
+Google Ads · Meta Ads · LinkedIn Ads · GA4 · Google Tag Manager · Conversions API · Multi-touch Attribution · Looker Studio · SQL · Search Console · Stripe · Shopify · Figma · A/B Testing · CRO · AI-Powered Campaign Optimization
+
+## Track record
+
+- I Dom You (live engagement, Head of Digital Marketing): 47× peak ROAS on Search High-Intent FR · +63% YoY revenue · €0.18 blended CPC at scale · 71% of paid customer traffic attributed.
+- Parlons Cash (podcast brand site): UX/UI rebuild, structure + hierarchy + conversion path.
+- ProToreMane (Tokyo-based app, FR market entry): UX/UI for French-market localization, Google Ads phase incoming.
+- AIAH (founder project): own product, building in public.
+- NOVARC (E-commerce acquisition lead, Apr–Oct 2025): multi-channel pilotage, Shopify optimization.
+- KAMILA SARL (Digital Marketing Lead, Nov 2024–May 2025): Meta Ads paid social, CPA improvement, SEO + SEA.
+- United Sports of Lebanon (EMEA Lead, 2017–2019): managed team of 9, multi-market campaigns across EU/ME/Africa.
+
+## Ideal client
+
+International startups entering the French market who need both Paid Media expertise AND landing-page UX in one place. €10K–100K monthly ad spend. Looking for measurable ROAS improvement, full-funnel tracking (GTM + Conversions API), and dashboards in Looker Studio.
+
+## Site map
+
+- / — homepage (English default, French toggle)
+- /fr/ — French landing
+- /track-record.html — full timeline
+- /sitemap.xml
+- /robots.txt

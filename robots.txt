@@ -25,3 +25,6 @@ Allow: /
 
 Sitemap: https://www.bahri.studio/sitemap.xml
 Host: www.bahri.studio
+
+# AI / LLM friendly
+# llms.txt: https://www.bahri.studio/llms.txt
