@@ -1215,3 +1215,30 @@ section{ padding: 120px var(--pad-x); max-width:var(--max); margin:0 auto; posit
 @media (max-width: 760px){
   .about-timeline li{ grid-template-columns: 1fr; gap: 6px; }
 }
+
+/* ───────────  MOBILE FINETUNE — kill excess gaps + center footer  ─────────── */
+@media (max-width: 760px){
+  /* Sections were 120px top/bottom on every section · way too much on phones.
+     Cut to 64px so visual flow matches the content density. */
+  section{ padding: 64px var(--pad-x); }
+  .track-section{ padding: 32px var(--pad-x) 64px; }
+  .track-hero{ padding-top: 120px; padding-bottom: 24px; }
+
+  /* Contact meta line was running off the right on narrow viewports.
+     Center it and let it wrap naturally. */
+  .contact-inner{ text-align: center; }
+  .contact-sub{ margin-left: auto; margin-right: auto; }
+  .contact-meta{ text-align: center; white-space: normal; line-height: 1.5; }
+
+  /* Footer was left-aligned on mobile because flex-wrap stacked items
+     while justify-content stayed at space-between. Stack + center. */
+  .foot{ padding: 24px var(--pad-x); }
+  .foot-row{
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    gap: 8px;
+  }
+  .foot-row > span{ display:block; }
+}
