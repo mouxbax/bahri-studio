@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="1200" viewBox="0 0 1200 1200">
+  <rect width="1200" height="1200" fill="#07070a"/>
+  <g transform="translate(600,600)">
+    <text x="0" y="40"
+          font-family="Georgia, 'Times New Roman', serif"
+          font-size="720"
+          font-style="italic"
+          font-weight="400"
+          fill="#c8ff5e"
+          text-anchor="middle"
+          letter-spacing="-0.02em">B</text>
+  </g>
+  <g transform="translate(600,1050)">
+    <text x="0" y="0"
+          font-family="Inter, system-ui, sans-serif"
+          font-size="56"
+          font-weight="600"
+          fill="#f5f5f5"
+          text-anchor="middle"
+          letter-spacing="6">BAHRI.STUDIO</text>
+  </g>
+</svg>
