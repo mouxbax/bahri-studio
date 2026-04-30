@@ -79,7 +79,9 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <link rel="stylesheet" href="/styles.css" />
 </head>
 <body>
-<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-T7ZXHSPC" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-T7ZXHSPC" height="0" width="0" style="display:none;visibility:hidden"></iframe>
+<div class="cursor-dot" aria-hidden="true"></div>
+<div class="cursor-spot" aria-hidden="true"></div>
 <header class="nav">
   <a class="brand" href="/" aria-label="bahri.studio home">
     <span class="brand-mark">◈</span><span class="brand-name">bahri.studio</span>
@@ -92,6 +94,10 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     <a href="/faq.html">FAQ</a>
     <a class="nav-cta" href="/#contact">Book audit →</a>
   </nav>
+  <div class="lang-toggle" role="group" aria-label="Language">
+    <button class="active" type="button" aria-current="true">EN</button>
+    <a href="/fr/">FR</a>
+  </div>
 </header>
 
 <main class="article-wrap">
@@ -198,5 +204,6 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   </div>
 </footer>
 <script src="/auto-date.js"></script>
+<script src="/app.js"></script>
 </body>
 </html>
