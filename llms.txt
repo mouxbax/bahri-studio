@@ -18,7 +18,7 @@
 
 ## Services
 
-- **Audit & Strategy** — from €1,500. Full account & landing-page audit, written report, prioritized fix list, 30-min Loom walkthrough. Delivered in 5 business days.
+- **Audit & Strategy** — from €1,500. Full account & landing-page audit, written report, prioritized fix list, 15-min Loom walkthrough. Delivered in 5 business days.
 - **Full-Stack Build** — from €3,000. Zero-to-launch campaign build: keyword research, account structure, ad copy, full tracking stack (GTM, Conversions API, attribution), landing-page UX/UI, 2 weeks of post-launch tuning. Delivered in 14–21 days.
 - **Digital Transformation Retainer** — from €4,500/mo (3-month minimum). Ongoing Paid Media + product, weekly ROAS/CPA optimization, monthly performance review, CRO + A/B testing, Looker Studio dashboards, fractional Head of Digital responsibilities.
 
