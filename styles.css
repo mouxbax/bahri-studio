@@ -1433,3 +1433,15 @@ section{ padding: 120px var(--pad-x); max-width:var(--max); margin:0 auto; posit
   .insights-grid{ grid-template-columns: 1fr 1fr; }
   .insights-grid > .insight-card:first-child{ grid-column: 1 / -1; }
 }
+
+/* CALENDLY EMBED */
+.calendly-inline-widget{
+  background: var(--bg);
+  border-radius: 14px;
+  border: 1px solid var(--line);
+  margin: 32px 0;
+  overflow: hidden;
+}
+@media (max-width: 760px){
+  .calendly-inline-widget{ height: 720px !important; }
+}

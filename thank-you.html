@@ -1,0 +1,131 @@
+<!doctype html>
+<html lang="en" data-theme="dark">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+<script src="/consent.js"></script>
+<script src="https://cdn.cookiehub.eu/c2/fb3e7d1d.js"></script>
+<script type="text/javascript">
+document.addEventListener("DOMContentLoaded", function(event) {
+  var cpm = {};
+  window.cookiehub.load(cpm);
+});
+</script>
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-T7ZXHSPC');</script>
+<title>Booked · bahri.studio</title>
+<meta name="description" content="Your 15-min audit is booked. Calendar invite landed in your inbox." />
+<meta name="author" content="Moustafa Bahri" />
+<meta name="robots" content="noindex,nofollow" />
+<link rel="canonical" href="https://www.bahri.studio/thank-you.html" />
+<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+<link rel="manifest" href="/site.webmanifest" />
+<meta name="theme-color" content="#07070a" />
+<link rel="preload" href="/styles.css" as="style" />
+<link rel="stylesheet" href="/styles.css" />
+</head>
+<body>
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-T7ZXHSPC" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+
+<div class="cursor-dot" aria-hidden="true"></div>
+<div class="cursor-spot" aria-hidden="true"></div>
+
+<header class="nav">
+  <a class="brand" href="/" aria-label="bahri.studio home">
+    <span class="brand-mark">◈</span><span class="brand-name">bahri.studio</span>
+  </a>
+  <nav class="nav-links">
+    <a href="/#case-studies">Work</a>
+    <a href="/#about">About</a>
+    <a href="/#services">Services</a>
+    <a href="/insights/">Insights</a>
+    <a href="/faq.html">FAQ</a>
+    <a class="nav-cta" href="/book.html">Book audit →</a>
+  </nav>
+  <div class="lang-toggle" role="group" aria-label="Language">
+    <button class="active" type="button" aria-current="true">EN</button>
+    <a href="/fr/thank-you.html">FR</a>
+  </div>
+</header>
+
+<main class="legal-wrap">
+  <header class="legal-head">
+    <p class="hero-meta"><span class="dot"></span> Booked · see you soon</p>
+    <h1>Booked. Talk soon.</h1>
+    <p class="lead">Calendar invite landed in your inbox. Add 15 minutes to your calendar — that's all you need.</p>
+  </header>
+
+  <section class="legal-cta">
+    <h2>What to bring</h2>
+    <ul>
+      <li>Read access to your Google Ads or Meta Ads account.</li>
+      <li>Your top 3 questions.</li>
+      <li>Coffee.</li>
+    </ul>
+  </section>
+
+  <section class="related">
+    <h2>Until then</h2>
+    <ul>
+      <li><a href="/insights/google-ads-france-startup-playbook.html">Google Ads for startups entering France: the 2026 playbook</a></li>
+      <li><a href="/insights/conversions-api-gtm-ga4-tracking-stack.html">Conversions API + GTM + GA4: the complete tracking stack for 2026</a></li>
+      <li><a href="/insights/roas-benchmarks-2026.html">ROAS benchmarks 2026: how to know if your Google Ads agency is lying</a></li>
+    </ul>
+  </section>
+</main>
+
+<footer class="foot">
+  <div class="foot-row">
+    <span>bahri.studio</span>
+    <span>—</span>
+    <span>Paris · Last updated <time data-auto-updated>April&nbsp;2026</time></span>
+  </div>
+</footer>
+
+<script src="/auto-date.js"></script>
+<script src="/app.js"></script>
+
+<script>
+  (function(){
+    window.dataLayer = window.dataLayer || [];
+
+    var qs = new URLSearchParams(window.location.search);
+    var eventType = qs.get('event_type_uuid') || '';
+    var inviteeUuid = qs.get('invitee_uuid') || '';
+    var assignedTo = qs.get('assigned_to') || '';
+    var eventStart = qs.get('event_start_time') || '';
+
+    if (window.__bahriBookingFired) return;
+    window.__bahriBookingFired = true;
+
+    window.dataLayer.push({
+      event: 'calendly_booking_complete',
+      booking: {
+        event_type_uuid: eventType,
+        invitee_uuid: inviteeUuid,
+        assigned_to: assignedTo,
+        event_start_time: eventStart,
+        source_page: document.referrer
+      },
+      ecommerce: {
+        value: 1500,
+        currency: 'EUR',
+        items: [{
+          item_id: 'audit_15min_call',
+          item_name: '15-min Audit Call',
+          item_category: 'Audit & Strategy',
+          price: 1500,
+          quantity: 1
+        }]
+      }
+    });
+  })();
+</script>
+</body>
+</html>
