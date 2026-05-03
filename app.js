@@ -191,7 +191,7 @@
       'contact.tag': '04 · let\'s talk',
       'contact.h1': 'Let\'s read', 'contact.h2': 'what your data says.',
       'contact.sub': '15 minutes. Screen-share on your account. You leave with 3 numbers and 3 next moves.',
-      'contact.cta1': 'Book on Calendly', 'contact.cta2': 'contact@bahri.studio',
+      'contact.cta1': 'Book a 15-min audit', 'contact.cta2': 'contact@bahri.studio',
       'contact.meta': 'Replying within 24h · Mon–Fri · Paris (CET)',
 
       // shared UI
@@ -341,7 +341,7 @@
       'contact.tag': '04 · on en parle',
       'contact.h1': 'Lisons', 'contact.h2': 'ce que vos données disent.',
       'contact.sub': '15 minutes. Screen-share sur votre compte. Vous repartez avec 3 chiffres et 3 prochaines actions.',
-      'contact.cta1': 'Réserver sur Calendly', 'contact.cta2': 'contact@bahri.studio',
+      'contact.cta1': 'Réserver un audit 15 min', 'contact.cta2': 'contact@bahri.studio',
       'contact.meta': 'Réponse sous 24h · Lun–Ven · Paris (CET)',
 
       // shared UI
