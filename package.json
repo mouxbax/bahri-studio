@@ -1,0 +1,15 @@
+{
+  "name": "bahri-studio",
+  "version": "1.0.0",
+  "description": "bahri.studio — Google & Meta Ads strategist · Paris. Hand-coded site with Vercel serverless functions.",
+  "private": true,
+  "type": "module",
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "scripts": {
+    "dev": "echo 'Static site — open index.html in your browser. Vercel handles /api/* serverless functions on deploy.'"
+  },
+  "author": "Moustafa Bahri <contact@bahri.studio>",
+  "homepage": "https://www.bahri.studio"
+}
