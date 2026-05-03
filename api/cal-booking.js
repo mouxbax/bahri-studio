@@ -116,7 +116,7 @@ async function fireGa4Event({ bookingId, inviteeEmail, eventTypeId, startTime })
     client_id: bookingId,
     user_id:   inviteeEmail || undefined,
     events: [{
-      name: 'calendly_booking_complete',
+      name: 'book_appointment',  // matches Google Ads BOOK_APPOINTMENT conversion (imported as conversion_event_book_appointment)
       params: {
         booking_id:        bookingId,
         event_type_id:     eventTypeId,
@@ -126,11 +126,21 @@ async function fireGa4Event({ bookingId, inviteeEmail, eventTypeId, startTime })
         engagement_time_msec: 100,
       },
     }, {
-      name: 'generate_lead',  // GA4 native event for ads optimization
+      name: 'generate_lead',  // GA4 native event for Google Ads lead-gen optimization
       params: {
         currency:          AUDIT_CURRENCY,
         value:             AUDIT_VALUE_EUR,
         booking_id:        bookingId,
+        engagement_time_msec: 100,
+      },
+    }, {
+      name: 'calendly_booking_complete',  // legacy event kept for historical GA4 reports / GTM compatibility
+      params: {
+        booking_id:        bookingId,
+        event_type_id:     eventTypeId,
+        event_start_time:  startTime,
+        currency:          AUDIT_CURRENCY,
+        value:             AUDIT_VALUE_EUR,
         engagement_time_msec: 100,
       },
     }],
