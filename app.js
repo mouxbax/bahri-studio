@@ -263,16 +263,19 @@
 
       // case 4 · AIAH
       'c4.tag':  'my product',
+      'c4.status':'v1 live',
       'c4.d1':   'Founder',
       'c4.d2':   'Built live',
-      'c4.role': 'The marketer-turned-founder arc. I own this one · building it in public.',
-      'c4.whatP': 'AIAH · an <strong>AI life companion</strong> that coaches your schedule, meals, budget, and social confidence through daily check-ins and smart nudges, turning your goals into a system you actually follow.',
+      'c4.role': 'The marketer-turned-founder arc. I own this one · shipped v1, June 2026.',
+      'c4.whatP': 'AIAH · become the superhuman you are. An <strong>AI life companion</strong> that fully organizes a human: schedule, meals, budget, social confidence. Daily check-ins, voice coaching, and smart nudges turn your goals into a system you actually follow.',
       'c4.whyP':  '9 years optimizing other people\'s funnels taught me what the page must do. AIAH is where I apply that to my own.',
-      'c4.m1Num': 'live build',
-      'c4.m1':    'in progress',
+      'c4.m1Num': '4 Jun 2026',
+      'c4.m1':    'v1 live · early access',
+      'c4.m2':    'signups · climbing',
       'c4.visit': 'visit aiah →',
-      'c4.stackP':'Next.js · Stripe · i18n · the rest TBA',
+      'c4.stackP':'Next.js 14 · TypeScript · Supabase · Prisma · GPT-4o · Whisper · TTS · Stripe · NextAuth · Vercel',
       'c4.cta':   'Visit aiah.app',
+      'c4.ctaBuild':'v1 shipped · Jun 2026',
 
       // footer
       'footer.mid':      '— Built live, by hand —',
@@ -413,16 +416,19 @@
 
       // case 4 · AIAH
       'c4.tag':  'mon produit',
+      'c4.status':'v1 live',
       'c4.d1':   'Fondateur',
       'c4.d2':   'Construit en live',
-      'c4.role': 'Le passage de marketeur à fondateur. Celui-ci, je le possède · je le construis en public.',
-      'c4.whatP': 'AIAH · un <strong>compagnon de vie IA</strong> qui coache votre agenda, vos repas, votre budget et votre confiance sociale via des check-ins quotidiens et des nudges intelligents, transformant vos objectifs en un système que vous suivez vraiment.',
+      'c4.role': 'Le passage de marketeur à fondateur. Celui-ci, je le possède · v1 livrée, juin 2026.',
+      'c4.whatP': 'AIAH · devenez le surhumain que vous êtes. Un <strong>compagnon de vie IA</strong> qui organise un humain en entier : agenda, repas, budget, confiance sociale. Des check-ins quotidiens, du coaching vocal et des nudges intelligents transforment vos objectifs en un système que vous suivez vraiment.',
       'c4.whyP':  '9 ans à optimiser les funnels des autres m\'ont appris ce que la page doit faire. AIAH, c\'est là que je l\'applique à la mienne.',
-      'c4.m1Num': 'build live',
-      'c4.m1':    'en cours',
+      'c4.m1Num': '4 juin 2026',
+      'c4.m1':    'v1 live · early access',
+      'c4.m2':    'inscriptions · en hausse',
       'c4.visit': 'visiter aiah →',
-      'c4.stackP':'Next.js · Stripe · i18n · le reste à venir',
+      'c4.stackP':'Next.js 14 · TypeScript · Supabase · Prisma · GPT-4o · Whisper · TTS · Stripe · NextAuth · Vercel',
       'c4.cta':   'Visiter aiah.app',
+      'c4.ctaBuild':'v1 livrée · juin 2026',
 
       // footer
       'footer.mid':      '— Construit en live, à la main —',
@@ -454,5 +460,34 @@
   if (initLang !== 'en' && I18N[initLang]) {
     applyLang(initLang);
   }
+
+  /* ─────────  AIAH live signup counter
+     Reads from aiah.app/api/public/signups (must return {count: N} with CORS
+     allow-origin for bahri.studio). Silently no-ops if endpoint isn't ready.
+     ───────── */
+  (function aiahSignupCounter() {
+    const metricEl = document.getElementById('aiah-signup-metric');
+    const numEl    = document.getElementById('aiah-signup-num');
+    if (!metricEl || !numEl) return;
+
+    fetch('https://aiah.app/api/public/signups', { mode: 'cors', cache: 'no-store' })
+      .then(r => r.ok ? r.json() : Promise.reject(r.status))
+      .then(data => {
+        const count = Number(data && data.count);
+        if (!Number.isFinite(count) || count < 1) return;
+        // Animate from 0 to count over ~1.2s for that ticker feel
+        const start = performance.now();
+        const dur   = 1200;
+        const tick  = (t) => {
+          const k = Math.min(1, (t - start) / dur);
+          const eased = 1 - Math.pow(1 - k, 3);
+          numEl.textContent = Math.round(count * eased).toLocaleString();
+          if (k < 1) requestAnimationFrame(tick);
+        };
+        metricEl.hidden = false;
+        requestAnimationFrame(tick);
+      })
+      .catch(() => { /* endpoint not ready yet · stay hidden, stage block still shows v1 live */ });
+  })();
 
 })();
