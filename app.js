@@ -261,14 +261,14 @@
       'c3.stackP': 'Market research · competitor benchmark · JP-language keyword research · SEO architecture · structured data · digital go-to-market plan · localization strategy · Figma · Claude / AI-assisted research ops',
       'c3.ctaPending': 'app pre-launch',
 
-      // case 4 · AIAH
+      // case 4 · Aiah
       'c4.tag':  'my product',
       'c4.status':'v1 live',
       'c4.d1':   'Founder',
       'c4.d2':   'Built live',
       'c4.role': 'The marketer-turned-founder arc. I own this one · shipped v1, June 2026.',
-      'c4.whatP': 'AIAH · become the superhuman you are. An <strong>AI life companion</strong> that fully organizes a human: schedule, meals, budget, social confidence. Daily check-ins, voice coaching, and smart nudges turn your goals into a system you actually follow.',
-      'c4.whyP':  '9 years optimizing other people\'s funnels taught me what the page must do. AIAH is where I apply that to my own.',
+      'c4.whatP': 'Aiah · become the superhuman you are. An <strong>AI life companion</strong> that fully organizes a human: schedule, meals, budget, social confidence. Daily check-ins, voice coaching, and smart nudges turn your goals into a system you actually follow.',
+      'c4.whyP':  '9 years optimizing other people\'s funnels taught me what the page must do. Aiah is where I apply that to my own.',
       'c4.m1Num': '4 Jun 2026',
       'c4.m1':    'v1 live · early access',
       'c4.m2':    'signups · climbing',
@@ -414,14 +414,14 @@
       'c3.stackP': 'Étude de marché · benchmark concurrentiel · recherche mots-clés en japonais · architecture SEO · données structurées · plan digital GTM · stratégie de localisation · Figma · Claude / ops de recherche assistées par l\'IA',
       'c3.ctaPending': 'app en pré-lancement',
 
-      // case 4 · AIAH
+      // case 4 · Aiah
       'c4.tag':  'mon produit',
       'c4.status':'v1 live',
       'c4.d1':   'Fondateur',
       'c4.d2':   'Construit en live',
       'c4.role': 'Le passage de marketeur à fondateur. Celui-ci, je le possède · v1 livrée, juin 2026.',
-      'c4.whatP': 'AIAH · devenez le surhumain que vous êtes. Un <strong>compagnon de vie IA</strong> qui organise un humain en entier : agenda, repas, budget, confiance sociale. Des check-ins quotidiens, du coaching vocal et des nudges intelligents transforment vos objectifs en un système que vous suivez vraiment.',
-      'c4.whyP':  '9 ans à optimiser les funnels des autres m\'ont appris ce que la page doit faire. AIAH, c\'est là que je l\'applique à la mienne.',
+      'c4.whatP': 'Aiah · devenez le surhumain que vous êtes. Un <strong>compagnon de vie IA</strong> qui organise un humain en entier : agenda, repas, budget, confiance sociale. Des check-ins quotidiens, du coaching vocal et des nudges intelligents transforment vos objectifs en un système que vous suivez vraiment.',
+      'c4.whyP':  '9 ans à optimiser les funnels des autres m\'ont appris ce que la page doit faire. Aiah, c\'est là que je l\'applique à la mienne.',
       'c4.m1Num': '4 juin 2026',
       'c4.m1':    'v1 live · early access',
       'c4.m2':    'inscriptions · en hausse',
@@ -461,7 +461,7 @@
     applyLang(initLang);
   }
 
-  /* ─────────  AIAH live signup counter
+  /* ─────────  Aiah live signup counter
      Reads from aiah.app/api/public/signups (must return {count: N} with CORS
      allow-origin for bahri.studio). Silently no-ops if endpoint isn't ready.
      ───────── */
@@ -470,11 +470,16 @@
     const numEl    = document.getElementById('aiah-signup-num');
     if (!metricEl || !numEl) return;
 
+    // Only reveal the counter once there's enough traction to look credible.
+    // Bump this threshold up/down anytime; below it the metric stays hidden and
+    // the Stage block just shows "v1 live · early access".
+    const SHOW_FROM = 25;
+
     fetch('https://aiah.app/api/public/signups', { mode: 'cors', cache: 'no-store' })
       .then(r => r.ok ? r.json() : Promise.reject(r.status))
       .then(data => {
         const count = Number(data && data.count);
-        if (!Number.isFinite(count) || count < 1) return;
+        if (!Number.isFinite(count) || count < SHOW_FROM) return;
         // Animate from 0 to count over ~1.2s for that ticker feel
         const start = performance.now();
         const dur   = 1200;

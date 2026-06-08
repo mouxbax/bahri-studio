@@ -418,7 +418,7 @@ section{ padding: 120px var(--pad-x); max-width:var(--max); margin:0 auto; posit
 }
 .reveal-link{ color: var(--accent); }
 
-/* AIAH "own" badge + I Dom You "live" badge in trust bar */
+/* Aiah "own" badge + I Dom You "live" badge in trust bar */
 .trust-logo-own{ position: relative; color: var(--warm); }
 .trust-logo-own:hover{ color: var(--warm); }
 .trust-logo-live{ position: relative; color: var(--accent); }
@@ -499,8 +499,8 @@ section{ padding: 120px var(--pad-x); max-width:var(--max); margin:0 auto; posit
 }
 .case-tag-live .live-dot{ background: var(--accent); }
 
-/* Warm variant — for AIAH (matches its orange brand identity) */
-/* AIAH "my product" badge — warm-orange, intensified */
+/* Warm variant — for Aiah (matches its orange brand identity) */
+/* Aiah "my product" badge — warm-orange, intensified */
 .case-head h3 .case-tag-live-warm,
 .case-tag-live-warm{
   display: inline-flex !important; align-items: center; gap: 6px;
