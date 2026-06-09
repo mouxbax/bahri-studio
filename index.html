@@ -208,12 +208,21 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link href="https://fonts.googleapis.com/css2?family=Geist+Mono:wght@300;400;500&family=Instrument+Serif&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
 <link rel="stylesheet" href="/styles.css" />
+<link rel="stylesheet" href="/cinematic.css" />
 </head>
 <body>
 <!-- Google Tag Manager (noscript) -->
 <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-T7ZXHSPC"
 height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <!-- End Google Tag Manager (noscript) -->
+
+<!-- ─────────────  CINEMATIC SHELL · WebGL backdrop + letterbox + grain  ───────────── -->
+<canvas id="cn-canvas" aria-hidden="true"></canvas>
+<div class="cn-vignette" aria-hidden="true"></div>
+<div class="cn-grain" aria-hidden="true"></div>
+<div class="cn-letterbox cn-letterbox-top" aria-hidden="true"></div>
+<div class="cn-letterbox cn-letterbox-bottom" aria-hidden="true"></div>
+<div class="cn-aspect-label" aria-hidden="true">presented in 2.40 : 1</div>
 
 <!-- ─────────────  CURSOR · dot + soft halo (both GPU-only, no blur/blend)  ───────────── -->
 <div class="cursor-dot" aria-hidden="true"></div>
@@ -686,6 +695,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
 <script src="/app.js" defer></script>
 <script src="/auto-date.js" defer></script>
+<script src="/cinematic.js" defer></script>
 <!-- Vercel Web Analytics + Speed Insights -->
 <script defer src="/_vercel/insights/script.js"></script>
 <script defer src="/_vercel/speed-insights/script.js"></script>
