@@ -123,13 +123,16 @@ main{ padding-top: var(--cn-letterbox); }
   font-family: 'Inter', system-ui, -apple-system, sans-serif !important;
   font-size: clamp(48px, 8vw, 92px) !important;
   font-weight: 200 !important;
-  line-height: .98 !important;
+  line-height: 1.08 !important;
   letter-spacing: -.035em !important;
-  margin: 0 0 1rem !important;
+  margin: 0 0 1.25rem !important;
+  padding: 0 .05em .12em;
   color: #fafafa;
   text-shadow: 0 0 60px rgba(0,0,0,.5);
+  overflow: visible !important;
 }
-.hero .hero-title .line{ display: block; }
+.hero .hero-title .line{ display: block; padding-bottom: .08em; overflow: visible; }
+.hero .hero-title .italic-line{ padding-bottom: .14em; }
 .hero .hero-title .word{
   display: inline-block;
   opacity: 0;

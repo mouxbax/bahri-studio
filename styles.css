@@ -500,7 +500,7 @@ section{ padding: 120px var(--pad-x); max-width:var(--max); margin:0 auto; posit
 .case-tag-live .live-dot{ background: var(--accent); }
 
 /* Warm variant — for Aiah (matches its orange brand identity) */
-/* Aiah "my product" badge — warm-orange, intensified */
+/* Aiah "own product" badge — warm-orange, intensified */
 .case-head h3 .case-tag-live-warm,
 .case-tag-live-warm{
   display: inline-flex !important; align-items: center; gap: 6px;
