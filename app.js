@@ -1,5 +1,5 @@
 /* ═════════════════════════════════════════════════
-   Moustafa Bahri · interactions
+   bahri.studio · interactions
    ═════════════════════════════════════════════════ */
 
 (() => {
@@ -136,8 +136,8 @@
   const I18N = {
     en: {
       'nav.work': 'Work', 'nav.about': 'About', 'nav.services': 'Services', 'nav.insights': 'Insights', 'nav.faq': 'FAQ', 'nav.cta': 'Book audit →',
-      'hero.meta': 'Available · April 2026 · accepting new partnerships',
-      'hero.role': 'Google & Meta Ads Strategist · Paid Media · Digital Transformation · Paris',
+      'hero.meta': 'a paid media studio · paris · est. 2017',
+      'hero.role': 'A Paid Media studio · Google · Meta · LinkedIn · Paris',
       'hero.sub': '<span class="hl">Google Ads · Meta Ads · UX/UI · Digital Transformation</span> for international startups entering France. 9&nbsp;years. €10–100K monthly budgets. <span class="hl">47× peak ROAS</span>, GA4 + GTM tracked, Looker&nbsp;Studio reported.',
       'stat.years': 'years', 'stat.spend': 'monthly ad spend handled',
       'stat.cases': 'case studies below', 'stat.langs': 'languages · EN · FR',
@@ -147,8 +147,8 @@
       'cases.title': 'Four cases. Two disciplines. One brain.',
       'cases.sub': 'Hover the cards. The numbers are hiding in the dark.',
       'about.tag': '02 · about',
-      'about.title': 'One brain. Both sides of the funnel.',
-      'about.lead': 'Paid Media and the landing page are one product. Same brain on both sides &mdash; <span class="hl">CPA drops, ROAS compounds.</span>',
+      'about.title': 'One studio. Both sides of the funnel.',
+      'about.lead': 'Paid Media and the landing page are one product. Same operator on both sides · <span class="hl">CPA drops, ROAS compounds.</span>',
       'about.p1': '<strong>9+&nbsp;years</strong> · <strong>Google &amp; Meta Ads Strategist</strong> · <strong>10–100K€ monthly budgets</strong>. Tracking on <span class="kw">GTM</span> + <span class="kw">Conversions API</span>. Reporting on <span class="kw">Looker Studio</span>. Every euro measured.',
       'about.p2': 'Last 12 months in numbers: <strong>47×</strong> peak ROAS, <strong>+63%</strong> YoY revenue on a flagship account, <strong>€0.18</strong> blended CPC at scale, <strong>71%</strong> of paid traffic = mine.',
       'about.p3': 'Google Data Analyst certified. Master · International Business · USGCI Paris. Trilingual: AR · EN · FR. Limited slots per quarter.',
@@ -178,7 +178,7 @@
       'svc2.l5': '2 weeks of post-launch tuning',
       'svc3.title': 'Digital Transformation',
       'svc3.flag':  'flagship',
-      'svc3.body':  'Acting as your <strong>fractional Head of Digital + Product</strong>. Same scope I run on the flagship FR account: Paid Media, the measurement layer, UX/UI of site &amp; app, the <span class="kw">SEO + AIO</span> copy, and the roadmap that connects them.',
+      'svc3.body':  'Acting as your <strong>fractional Head of Digital + Product</strong>. Same scope We run on the flagship FR account: Paid Media, the measurement layer, UX/UI of site &amp; app, the <span class="kw">SEO + AIO</span> copy, and the roadmap that connects them.',
       'svc3.l1': 'Paid Media · Google · Meta · LinkedIn',
       'svc3.l2': 'Tracking infra · <span class="kw">GA4</span> · <span class="kw">GTM</span> · <span class="kw">Conversions API</span> · server-side',
       'svc3.l3': 'UX/UI of website + mobile app',

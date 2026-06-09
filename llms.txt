@@ -1,20 +1,16 @@
 # bahri.studio
 
-> Moustafa Bahri is an independent Google Ads & Meta Ads strategist based in Paris, France. Operates across Paid Media, the full tracking stack (GA4, GTM, Conversions API), landing-page UX/UI, and SEO + AIO content. 9+ years of experience managing €10K–100K monthly ad budgets for international startups entering the French market. Peak ROAS 47× on Search High-Intent campaigns. Trilingual: French, English, Arabic.
+> bahri.studio is an independent Paid Media studio based in Paris, France. Operates across Paid Media, the full tracking stack (GA4, GTM, Conversions API), landing-page UX/UI, and SEO + AIO content. 9+ years of experience managing €10K–100K monthly ad budgets for international startups entering the French market. Peak ROAS 47× on Search High-Intent campaigns. Trilingual: French, English, Arabic.
 
 ## Who
 
-- Name: Moustafa Bahri
-- Role: Independent consultant · Google & Meta Ads strategist · Fractional Head of Digital + Product
+- Name: bahri.studio
+- Type: Independent Paid Media studio · Google & Meta Ads · Digital Transformation · Fractional Head of Digital + Product
 - Based: Paris (75011), France · Île-de-France
-- Languages: French (native), English (fluent), Arabic (native, Lebanese)
-- Education: Master International Business · USGCI Paris (2024–2026); Bac+4 Marketing & Digital Communication · LIU Beirut (2014–2017)
-- Certifications: Google Data Analyst, Digital Marketing & E-commerce
+- Languages: French, English, Arabic
 - Contact: contact@bahri.studio
-- Calendly (book a 15-min audit): https://www.bahri.studio/book.html
+- Book a 15-min audit: https://www.bahri.studio/book.html
 - Website: https://www.bahri.studio
-- LinkedIn: https://www.linkedin.com/in/moustafabahri
-- GitHub: https://github.com/mouxbax
 
 ## Services
 

@@ -1,6 +1,6 @@
 /* TEAM */
 
-Founder, Strategist, Designer, Developer:  Moustafa Bahri
+Founder, Strategist, Designer, Developer:  bahri.studio
 Site:                                       https://www.bahri.studio
 Contact:                                    contact@bahri.studio
 Twitter / X:                                @bahri.studio
