@@ -20,6 +20,13 @@
 /* ─────────  body + base  ───────── */
 body{ background: var(--cn-bg); overflow-x: hidden; }
 
+/* Skip rendering work on offscreen sections · huge perf win on long pages */
+section.case, section.service, section.contact, section.trust, section#about,
+section.faq-item, article.case{
+  content-visibility: auto;
+  contain-intrinsic-size: 600px;
+}
+
 /* ─────────  WebGL canvas backdrop  ───────── */
 #cn-canvas{
   position: fixed; inset: 0;
@@ -71,8 +78,8 @@ header.nav, main, footer.foot{ position: relative; z-index: 4; }
 header.nav{
   top: var(--cn-letterbox) !important;
   background: rgba(6,6,10,.45);
-  backdrop-filter: blur(16px) saturate(140%);
-  -webkit-backdrop-filter: blur(16px) saturate(140%);
+  backdrop-filter: blur(10px) saturate(130%);
+  -webkit-backdrop-filter: blur(10px) saturate(130%);
   border-bottom: 1px solid rgba(200,255,94,.08);
 }
 
@@ -243,8 +250,8 @@ main{ padding-top: var(--cn-letterbox); }
   background: rgba(200,255,94,.08) !important;
   color: var(--cn-lime) !important;
   border: 1px solid var(--cn-lime-dim) !important;
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
   box-shadow: 0 0 32px rgba(200,255,94,.18), inset 0 0 12px rgba(200,255,94,.04);
 }
 .hero .hero-cta .btn-primary:hover{
@@ -319,8 +326,8 @@ main{ padding-top: var(--cn-letterbox); }
 .case{
   position: relative;
   background: var(--cn-glass) !important;
-  backdrop-filter: blur(20px) saturate(140%);
-  -webkit-backdrop-filter: blur(20px) saturate(140%);
+  backdrop-filter: blur(10px) saturate(130%);
+  -webkit-backdrop-filter: blur(10px) saturate(130%);
   border: 1px solid var(--cn-glass-bd) !important;
   border-radius: 18px !important;
   padding: 2rem !important;
@@ -367,8 +374,8 @@ main{ padding-top: var(--cn-letterbox); }
    ═════════════════════════════════════════════════ */
 .service{
   background: var(--cn-glass) !important;
-  backdrop-filter: blur(18px) saturate(130%);
-  -webkit-backdrop-filter: blur(18px) saturate(130%);
+  backdrop-filter: blur(10px) saturate(120%);
+  -webkit-backdrop-filter: blur(10px) saturate(120%);
   border: 1px solid var(--cn-glass-bd) !important;
   border-radius: 16px !important;
   position: relative;
@@ -379,8 +386,8 @@ main{ padding-top: var(--cn-letterbox); }
    ═════════════════════════════════════════════════ */
 section#about{
   background: rgba(8,8,12,.4);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
   border-top: 1px solid rgba(255,255,255,.04);
   border-bottom: 1px solid rgba(255,255,255,.04);
 }
@@ -415,8 +422,8 @@ section.contact h2{
    ═════════════════════════════════════════════════ */
 footer.foot{
   background: rgba(0,0,0,.6);
-  backdrop-filter: blur(14px);
-  -webkit-backdrop-filter: blur(14px);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
   border-top: 1px solid rgba(200,255,94,.08);
   font-family: var(--mono);
   font-size: 10px; letter-spacing: .2em; text-transform: uppercase;

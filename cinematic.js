@@ -62,8 +62,8 @@
     renderer.setSize(W, H);
     renderer.setClearColor(0x000000, 0);
 
-    // Atmospheric dust
-    const pCount = window.innerWidth < 720 ? 1100 : 2200;
+    // Atmospheric dust · tuned down for sustained-session perf
+    const pCount = window.innerWidth < 720 ? 600 : 1100;
     const pGeo = new THREE.BufferGeometry();
     const pPos = new Float32Array(pCount * 3);
     const pCol = new Float32Array(pCount * 3);
@@ -150,9 +150,29 @@
     const t0 = performance.now();
     const dollyDur = 3.2;
 
+    // Perf control · pause render when canvas scrolled off-screen + cap FPS at 30
+    // (was 60 implicit · halving frame work saves significant GPU over a long session)
+    let canvasVisible = true;
+    if ('IntersectionObserver' in window){
+      const io = new IntersectionObserver((entries) => {
+        canvasVisible = entries[0].isIntersecting;
+      }, { threshold: 0 });
+      io.observe(canvas);
+    }
+
+    const FRAME_MS = 1000 / 30;
+    let lastFrameTime = 0;
     let frame = 0;
-    function animate(){
-      const now = performance.now();
+    let rafHandle = 0;
+
+    function animate(now){
+      rafHandle = requestAnimationFrame(animate);
+      // Skip render if canvas is off-screen · saves GPU when reading lower sections
+      if (!canvasVisible) return;
+      // FPS cap
+      if (now - lastFrameTime < FRAME_MS) return;
+      lastFrameTime = now;
+
       const elapsed = (now - t0) / 1000;
       frame++;
       mx += (tx - mx) * 0.04;
@@ -167,12 +187,12 @@
         camera.position.z = endZ + Math.sin(elapsed * 0.18) * 0.4 + scrollY * 0.004;
       }
 
-      particles.rotation.y = frame * 0.0004 + mx * 0.15;
+      particles.rotation.y = frame * 0.0008 + mx * 0.15;
       particles.rotation.x = my * 0.08;
       particles.position.y = scrollY * 0.004;
 
-      corona.rotation.z = frame * 0.0015;
-      halo.rotation.z = -frame * 0.0008;
+      corona.rotation.z = frame * 0.003;
+      halo.rotation.z = -frame * 0.0016;
       halo.scale.setScalar(1 + Math.sin(elapsed * 0.4) * 0.04);
 
       camera.position.x = mx * 1.4;
@@ -180,9 +200,8 @@
       camera.lookAt(0, 0, -10);
 
       renderer.render(scene, camera);
-      requestAnimationFrame(animate);
     }
-    animate();
+    rafHandle = requestAnimationFrame(animate);
 
     // Resize handling
     let resizeT;
@@ -197,7 +216,13 @@
 
     // Auto-pause when tab hidden (saves battery)
     document.addEventListener('visibilitychange', () => {
-      renderer.setAnimationLoop(document.hidden ? null : animate);
+      if (document.hidden){
+        cancelAnimationFrame(rafHandle);
+        rafHandle = 0;
+      } else if (!rafHandle){
+        lastFrameTime = 0;
+        rafHandle = requestAnimationFrame(animate);
+      }
     });
   }
 
