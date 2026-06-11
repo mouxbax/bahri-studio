@@ -150,12 +150,29 @@
     const t0 = performance.now();
     const dollyDur = 3.2;
 
-    // Perf control · pause render when canvas scrolled off-screen + cap FPS at 30
-    // (was 60 implicit · halving frame work saves significant GPU over a long session)
+    // Perf control · fully STOP rAF when canvas scrolled off-screen + cap FPS at 30
+    // Previously we only skipped render — the rAF loop kept spinning, which compounded
+    // with cursor/scroll listeners and caused gradual slowdown during a session.
     let canvasVisible = true;
+    let rafHandle = 0;
+
+    function startLoop(){
+      if (rafHandle) return;
+      lastFrameTime = 0;
+      rafHandle = requestAnimationFrame(animate);
+    }
+    function stopLoop(){
+      if (!rafHandle) return;
+      cancelAnimationFrame(rafHandle);
+      rafHandle = 0;
+    }
+
     if ('IntersectionObserver' in window){
       const io = new IntersectionObserver((entries) => {
-        canvasVisible = entries[0].isIntersecting;
+        const vis = entries[0].isIntersecting;
+        if (vis === canvasVisible) return;
+        canvasVisible = vis;
+        if (vis) startLoop(); else stopLoop();
       }, { threshold: 0 });
       io.observe(canvas);
     }
@@ -163,12 +180,10 @@
     const FRAME_MS = 1000 / 30;
     let lastFrameTime = 0;
     let frame = 0;
-    let rafHandle = 0;
 
     function animate(now){
+      // Re-queue first so we never leak a frame on early returns
       rafHandle = requestAnimationFrame(animate);
-      // Skip render if canvas is off-screen · saves GPU when reading lower sections
-      if (!canvasVisible) return;
       // FPS cap
       if (now - lastFrameTime < FRAME_MS) return;
       lastFrameTime = now;
@@ -201,7 +216,7 @@
 
       renderer.render(scene, camera);
     }
-    rafHandle = requestAnimationFrame(animate);
+    startLoop();
 
     // Resize handling
     let resizeT;
@@ -216,13 +231,8 @@
 
     // Auto-pause when tab hidden (saves battery)
     document.addEventListener('visibilitychange', () => {
-      if (document.hidden){
-        cancelAnimationFrame(rafHandle);
-        rafHandle = 0;
-      } else if (!rafHandle){
-        lastFrameTime = 0;
-        rafHandle = requestAnimationFrame(animate);
-      }
+      if (document.hidden) stopLoop();
+      else if (canvasVisible) startLoop();
     });
   }
 

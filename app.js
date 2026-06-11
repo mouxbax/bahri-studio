@@ -12,7 +12,10 @@
   const lowPower = reducedMotion || lowEnd;
   if (lowPower) document.documentElement.classList.add('low-power');
 
-  /* ─────────  CURSOR · instant dot + lerping halo, rAF only while moving  ───────── */
+  /* ─────────  CURSOR · rAF-throttled dot + lerping halo  ───────── */
+  // Writing dot.style.transform on every pointermove was triggering style
+  // recalcs hundreds of times/sec and compounding with reveal-block + cinematic
+  // effects. Now BOTH dot and halo write inside a single rAF tick.
   const dot  = document.querySelector('.cursor-dot');
   const spot = document.querySelector('.cursor-spot');
   if (supportsHover && !lowPower && dot && spot) {
@@ -23,6 +26,8 @@
     const tick = () => {
       sx += (tx - sx) * 0.20;
       sy += (ty - sy) * 0.20;
+      // Dot tracks raw target · halo lerps behind
+      dot.style.transform  = `translate3d(${tx}px, ${ty}px, 0) translate(-50%,-50%)`;
       spot.style.transform = `translate3d(${sx}px, ${sy}px, 0) translate(-50%,-50%)`;
       const settled = Math.abs(tx - sx) < 0.4 && Math.abs(ty - sy) < 0.4;
       if (settled && performance.now() - lastMove > 220) { rafActive = false; return; }
@@ -32,8 +37,6 @@
     window.addEventListener('pointermove', (e) => {
       tx = e.clientX; ty = e.clientY;
       lastMove = performance.now();
-      // Dot is INSTANT · written directly on every move, no rAF wait
-      dot.style.transform = `translate3d(${tx}px, ${ty}px, 0) translate(-50%,-50%)`;
       if (!rafActive) { rafActive = true; requestAnimationFrame(tick); }
     }, { passive: true });
 
@@ -136,9 +139,9 @@
   const I18N = {
     en: {
       'nav.work': 'Work', 'nav.about': 'About', 'nav.services': 'Services', 'nav.insights': 'Insights', 'nav.faq': 'FAQ', 'nav.cta': 'Book audit →',
-      'hero.meta': 'a paid media studio · paris · est. 2017',
-      'hero.role': 'A Paid Media studio · Google · Meta · LinkedIn · Paris',
-      'hero.sub': '<span class="hl">Google Ads · Meta Ads · UX/UI · Digital Transformation</span> for international startups entering France. 9&nbsp;years. €10–100K monthly budgets. <span class="hl">47× peak ROAS</span>, GA4 + GTM tracked, Looker&nbsp;Studio reported.',
+      'hero.meta': 'a digital operator for the 2035 funnel · paris · est. 2017',
+      'hero.role': 'Paid Media · AI agents · Automation · Product · Paris',
+      'hero.sub': '<span class="hl">Google · Meta · LinkedIn Ads · AI agents · N8n automation · UX/UI</span> for brands digitalizing for the next decade. 9&nbsp;years. €10–100K monthly budgets. <span class="hl">47× peak ROAS</span>, GA4 + GTM tracked, Claude &amp; N8n wired in.',
       'stat.years': 'years', 'stat.spend': 'monthly ad spend handled',
       'stat.cases': 'case studies below', 'stat.langs': 'languages · EN · FR',
       'hero.cta1': 'Book a 15-min audit', 'hero.cta2': 'See the work', 'hero.scroll': 'scroll',
@@ -159,8 +162,8 @@
       'track.sub': 'From an in-house EMEA lead in Beirut to running multi-million-euro paid funnels in Paris. Every role taught me a piece of the same skill · turning ad spend into revenue.',
       'track.cta': 'Book a 15-min audit',
       'track.home': 'Back to portfolio',
-      'services.tag': '03 · services', 'services.title': 'Three depths. One operator.',
-      'services.sub': 'Paid Media · Tracking · UX/UI · SEO + AIO · Product. Pick the depth your funnel deserves.',
+      'services.tag': '03 · services', 'services.title': 'Four depths. One operator.',
+      'services.sub': 'Paid Media · AI agents · Automation · UX/UI · SEO + AIO · Product. Pick the depth your funnel deserves.',
       'svc.from': 'from',
       'svc.perMo': '/ mo',
       'svc.cta':  'Get scope →',
@@ -188,6 +191,13 @@
       'svc3.l7': '3-month minimum',
       'svc3.usedBy': 'Used on the flagship FR account ↗',
       'svc.usedFor': 'Used on the flagship FR account ↗',
+      'svc4.title': 'AI Agents & Automation',
+      'svc4.flag':  'new',
+      'svc4.body':  'Plug a layer of <span class="kw">Claude AI agents</span> and <span class="kw">N8n workflows</span> into your ops. Reporting agents, lead routers, ad-copy generators, CRM sync, Stripe → Sheets · the funnel runs itself.',
+      'svc4.l1': 'Custom <span class="kw">Claude agents</span> · reporting · ad copy · lead routing',
+      'svc4.l2': '<span class="kw">N8n</span> workflows · CRM · Stripe · Sheets · Slack · Notion',
+      'svc4.l3': 'Replaces hours of weekly manual work',
+      'svc4.l4': 'Built on your stack · you own every workflow',
       'contact.tag': '04 · let\'s talk',
       'contact.h1': 'Let\'s read', 'contact.h2': 'what your data says.',
       'contact.sub': '15 minutes. Screen-share on your account. You leave with 3 numbers and 3 next moves.',
@@ -221,14 +231,14 @@
       'c1.hm2':  'YoY revenue · April vs prior year',
       'c1.hm3':  'of all customer traffic = mine',
       'c1.startingP': '12 active campaigns · 3 platforms. 4 campaigns at sub-2× ROAS. <span class="kw">Conversions API</span> ↔ Stripe handoff incomplete · merci-page event missing.',
-      'c1.approachP': 'Took <strong>end-to-end ownership</strong> of the Paid Media architecture <em>and</em> the product surface it feeds. Re-segmented a fragmented 12-campaign account into a 3-tier funnel-aligned system (High-Intent · Brand · Geo). Reallocated <strong>€1,500+</strong> into top-quartile auctions and instated a negative-keyword governance loop. Rebuilt the full <span class="kw">measurement layer</span> · <span class="kw">GA4</span>, <span class="kw">GTM</span>, <span class="kw">Conversions API</span>, server-side handoff into Stripe · so revenue attribution is closed-loop, not modeled. <strong>On the product side:</strong> drove the full website redesign and the mobile-app overhaul as Product lead · wireframes, IA, copy, dev partnership, ship.',
+      'c1.approachP': 'Took <strong>end-to-end ownership</strong> of the Paid Media architecture <em>and</em> the product surface it feeds. Re-segmented a fragmented 12-campaign account into a 3-tier funnel-aligned system (High-Intent · Brand · Geo). Reallocated <strong>€1,500+</strong> into top-quartile auctions and instated a negative-keyword governance loop. Rebuilt the full <span class="kw">measurement layer</span> · <span class="kw">GA4</span>, <span class="kw">GTM</span>, <span class="kw">Conversions API</span>, server-side handoff into Stripe · so revenue attribution is closed-loop, not modeled. <strong>On the product side:</strong> drove the full website redesign and the mobile-app overhaul as Product lead · wireframes, IA, copy, dev partnership, ship. <strong>Layered in <span class="kw">AI agents</span> and <span class="kw">N8n automations</span></strong> · Claude-powered ops agents for reporting, lead routing and ad-copy generation; N8n workflows automating CRM sync, retargeting audiences, and Stripe → Sheets reconciliation. Hours of weekly manual work removed.',
       'c1.ctaOld':   'Check the new website →',
       'c1.ctaBuild': '',
       'c1.m1': 'ROAS · Search High Intent FR',
       'c1.m2': 'incremental revenue · 24 days',
       'c1.m3': 'CPC · 18,387 clicks',
       'c1.m4': 'paying customers YoY',
-      'c1.stackP': 'Google Ads · Meta Ads · LinkedIn Ads · GA4 · GTM · <span class="kw">Conversions API</span> · Stripe attribution · Looker Studio · Figma (UX/UI) · hand-written HTML/CSS for landing pages · <span class="kw">SEO + AIO</span> copywriting and full-site audit · Claude / AI-assisted ops',
+      'c1.stackP': 'Google Ads · Meta Ads · LinkedIn Ads · GA4 · GTM · <span class="kw">Conversions API</span> · Stripe attribution · Looker Studio · Figma (UX/UI) · hand-written HTML/CSS for landing pages · <span class="kw">SEO + AIO</span> copywriting and full-site audit · <span class="kw">Claude AI agents</span> · <span class="kw">N8n automation</span> workflows · CRM &amp; ops automation',
       'c1.ctaLive': 'live · 859K impressions delivered',
 
       // case 2 · Parlons Cash
@@ -273,7 +283,7 @@
       'c4.m1':    'v1 live · early access',
       'c4.m2':    'signups · climbing',
       'c4.visit': 'visit aiah →',
-      'c4.stackP':'Next.js 14 · TypeScript · Supabase · Prisma · GPT-4o · Whisper · TTS · Stripe · NextAuth · Vercel',
+      'c4.stackP':'Next.js 14 · TypeScript · Supabase · Prisma · GPT-4o · <span class="kw">Claude</span> · Whisper · TTS · Stripe · NextAuth · Vercel · <span class="kw">N8n</span> automation workflows for nudges, onboarding and ops',
       'c4.cta':   'Visit aiah.app',
       'c4.ctaBuild':'v1 shipped · Jun 2026',
 
@@ -283,9 +293,9 @@
     },
     fr: {
       'nav.work': 'Projets', 'nav.about': 'À propos', 'nav.services': 'Prestations', 'nav.insights': 'Insights', 'nav.faq': 'FAQ', 'nav.cta': 'Réserver un audit →',
-      'hero.meta': 'Disponible · Avril 2026 · partenariats ouverts',
-      'hero.role': 'Consultant Google & Meta Ads · Paid Media · Transformation Digitale · Paris',
-      'hero.sub': '<span class="hl">Google Ads · Meta Ads · UX/UI · Transformation Digitale</span> pour startups internationales sur le marché français. 9&nbsp;ans. budgets 10–100K€/mois. <span class="hl">ROAS jusqu\'à 47×</span>, tracking GA4 + GTM, reporting Looker&nbsp;Studio.',
+      'hero.meta': 'un opérateur digital pour le funnel 2035 · paris · est. 2017',
+      'hero.role': 'Paid Media · agents IA · automatisation · produit · Paris',
+      'hero.sub': '<span class="hl">Google · Meta · LinkedIn Ads · agents IA · automatisation N8n · UX/UI</span> pour les marques qui se digitalisent pour la prochaine décennie. 9&nbsp;ans. budgets 10–100K€/mois. <span class="hl">ROAS jusqu\'à 47×</span>, tracking GA4 + GTM, Claude &amp; N8n branchés.',
       'stat.years': 'ans', 'stat.spend': 'budget pub mensuel piloté',
       'stat.cases': 'cas clients ci-dessous', 'stat.langs': 'langues · EN · FR',
       'hero.cta1': 'Réserver un audit de 15 min', 'hero.cta2': 'Voir le travail', 'hero.scroll': 'scroll',
@@ -306,8 +316,8 @@
       'track.sub': 'D\'EMEA Lead in-house à Beyrouth à piloter des funnels paid à plusieurs millions d\'euros à Paris. Chaque rôle m\'a appris une partie du même métier · transformer du budget pub en revenus.',
       'track.cta': 'Réserver un audit de 15 min',
       'track.home': 'Retour au portfolio',
-      'services.tag': '03 · prestations', 'services.title': 'Trois profondeurs. Un opérateur.',
-      'services.sub': 'Paid Media · Tracking · UX/UI · SEO + AIO · Produit. Choisissez la profondeur que votre funnel mérite.',
+      'services.tag': '03 · prestations', 'services.title': 'Quatre profondeurs. Un opérateur.',
+      'services.sub': 'Paid Media · agents IA · automatisation · UX/UI · SEO + AIO · Produit. Choisissez la profondeur que votre funnel mérite.',
       'svc.from': 'à partir de',
       'svc.perMo': '/ mois',
       'svc.cta':  'Demander le scope →',
@@ -335,6 +345,13 @@
       'svc3.l7': 'Engagement minimum 3 mois',
       'svc3.usedBy': 'Utilisé sur le compte phare FR ↗',
       'svc.usedFor': 'Utilisé sur le compte phare FR ↗',
+      'svc4.title': 'Agents IA & Automatisation',
+      'svc4.flag':  'nouveau',
+      'svc4.body':  'Greffer une couche d\'<span class="kw">agents Claude</span> et de <span class="kw">workflows N8n</span> sur vos ops. Agents de reporting, routeurs de leads, générateurs de copy publicitaire, sync CRM, Stripe → Sheets · le funnel tourne tout seul.',
+      'svc4.l1': 'Agents <span class="kw">Claude</span> sur mesure · reporting · copy publicitaire · routage des leads',
+      'svc4.l2': 'Workflows <span class="kw">N8n</span> · CRM · Stripe · Sheets · Slack · Notion',
+      'svc4.l3': 'Remplace des heures de travail manuel hebdomadaire',
+      'svc4.l4': 'Construit sur votre stack · vous possédez chaque workflow',
       // legacy keys kept just in case any other DOM uses them — harmless duplicates
       'svc3.l1_legacy': 'Optimisation hebdo <span class="kw">ROAS / CPA</span>',
       'svc3.l2': 'Revue de performance mensuelle',
@@ -374,14 +391,14 @@
       'c1.hm2':  'revenu YoY · avril vs année précédente',
       'c1.hm3':  'du trafic clients = moi',
       'c1.startingP': '12 campagnes actives · 3 plateformes. 4 campagnes à ROAS sub-2×. <span class="kw">Conversions API</span> ↔ Stripe non finalisée · événement merci-page manquant.',
-      'c1.approachP': 'Pris la <strong>responsabilité de bout en bout</strong> de l\'architecture Paid Media <em>et</em> de la surface produit qu\'elle alimente. Re-segmenté un compte fragmenté de 12 campagnes en un système à 3 niveaux aligné sur le funnel (High-Intent · Brand · Geo). Réalloué <strong>€1 500+</strong> vers les enchères du top-quartile et mis en place une gouvernance de mots-clés négatifs. Reconstruit toute la <span class="kw">couche de mesure</span> · <span class="kw">GA4</span>, <span class="kw">GTM</span>, <span class="kw">Conversions API</span>, handoff server-side vers Stripe · pour que l\'attribution revenue soit en boucle fermée, pas modélisée. <strong>Côté produit :</strong> piloté la refonte complète du site web et l\'overhaul de l\'app mobile en tant que Product lead · wireframes, IA, copy, partenariat dev, ship.',
+      'c1.approachP': 'Pris la <strong>responsabilité de bout en bout</strong> de l\'architecture Paid Media <em>et</em> de la surface produit qu\'elle alimente. Re-segmenté un compte fragmenté de 12 campagnes en un système à 3 niveaux aligné sur le funnel (High-Intent · Brand · Geo). Réalloué <strong>€1 500+</strong> vers les enchères du top-quartile et mis en place une gouvernance de mots-clés négatifs. Reconstruit toute la <span class="kw">couche de mesure</span> · <span class="kw">GA4</span>, <span class="kw">GTM</span>, <span class="kw">Conversions API</span>, handoff server-side vers Stripe · pour que l\'attribution revenue soit en boucle fermée, pas modélisée. <strong>Côté produit :</strong> piloté la refonte complète du site web et l\'overhaul de l\'app mobile en tant que Product lead · wireframes, IA, copy, partenariat dev, ship. <strong>Ajout d\'<span class="kw">agents IA</span> et d\'<span class="kw">automatisations N8n</span></strong> · agents Claude pour le reporting, le routage des leads et la génération de copy publicitaire ; workflows N8n pour synchroniser le CRM, alimenter les audiences de retargeting et réconcilier Stripe → Sheets. Des heures de travail manuel hebdomadaire en moins.',
       'c1.ctaOld':   'Découvrir le nouveau site →',
       'c1.ctaBuild': '',
       'c1.m1': 'ROAS · Search High Intent FR',
       'c1.m2': 'revenu incrémental · 24 jours',
       'c1.m3': 'CPC · 18 387 clics',
       'c1.m4': 'clients payants YoY',
-      'c1.stackP': 'Google Ads · Meta Ads · LinkedIn Ads · GA4 · GTM · <span class="kw">Conversions API</span> · attribution Stripe · Looker Studio · Figma (UX/UI) · HTML/CSS écrits à la main pour les landing pages · copywriting <span class="kw">SEO + AIO</span> et audit complet · Claude / ops assistées par l\'IA',
+      'c1.stackP': 'Google Ads · Meta Ads · LinkedIn Ads · GA4 · GTM · <span class="kw">Conversions API</span> · attribution Stripe · Looker Studio · Figma (UX/UI) · HTML/CSS écrits à la main pour les landing pages · copywriting <span class="kw">SEO + AIO</span> et audit complet · <span class="kw">agents IA Claude</span> · <span class="kw">workflows N8n</span> · automatisation CRM &amp; ops',
       'c1.ctaLive': 'en live · 859K impressions livrées',
 
       // case 2 · Parlons Cash
@@ -426,7 +443,7 @@
       'c4.m1':    'v1 live · early access',
       'c4.m2':    'inscriptions · en hausse',
       'c4.visit': 'visiter aiah →',
-      'c4.stackP':'Next.js 14 · TypeScript · Supabase · Prisma · GPT-4o · Whisper · TTS · Stripe · NextAuth · Vercel',
+      'c4.stackP':'Next.js 14 · TypeScript · Supabase · Prisma · GPT-4o · <span class="kw">Claude</span> · Whisper · TTS · Stripe · NextAuth · Vercel · workflows d\'automatisation <span class="kw">N8n</span> pour les nudges, l\'onboarding et les ops',
       'c4.cta':   'Visiter aiah.app',
       'c4.ctaBuild':'v1 livrée · juin 2026',
 

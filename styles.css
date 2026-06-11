@@ -848,7 +848,7 @@ section{ padding: 120px var(--pad-x); max-width:var(--max); margin:0 auto; posit
 
 /* ───────────  SERVICES  ─────────── */
 .service-grid{
-  display:grid; grid-template-columns: repeat(3, 1fr); gap: 16px;
+  display:grid; grid-template-columns: repeat(2, 1fr); gap: 16px;
 }
 .service{
   border:1px solid var(--line);
