@@ -167,20 +167,22 @@ section{ padding: 120px var(--pad-x); max-width:var(--max); margin:0 auto; posit
   letter-spacing: -0.03em;
   margin: 0 0 32px;
   overflow: visible;
+  text-align: center;
+  /* Symmetric inline padding so italic descenders never clip on either side */
+  padding-left: 0.4em;
   padding-right: 0.4em;
 }
 .hero-title .line{
   display:block;
   overflow: visible;
-  padding-right: 0.4em;
+  text-align: center;
   padding-bottom: 0.06em;
 }
-.hero-title .italic-line{ padding-right: 0.7em; }
+.hero-title .italic-line{ padding-left: 0.18em; padding-right: 0.18em; }
 .hero-title .word{ display:inline-block; }
 .hero-title .italic{
   font-style: italic;
   color: var(--accent);
-  padding-right: 0.18em;
 }
 
 .hero-sub{
